@@ -1,38 +1,118 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
-    <meata charset = "UTF-8">
-    <meta name ="viewport" content="width=device-width, initial-scale">
-    <title>java-page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-    <link rel = "stylesheet" href = "assets\css\style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code && Syntax | Java</title>
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <div id="master-title">
             <h1>Code && Syntax</h1>
         </div>
         <nav>
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="java-page.html">Java</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="java-page.html" class="active">Java</a></li>
                 <li><a href="python-page.html">Python</a></li>
                 <li><a href="spl-page.html">SQL</a></li>
                 <li><a href="dsa-page.html">Data Structures & Algorithms</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
         </nav>
+
+        <!-- Mobile Menu Button -->
+        <button class="menu-toggle" aria-label="Toggle sidebar" aria-expanded="false">☰</button>
     </header>
-    <main> 
-    </main>
-    <aside>
-    </aside>
+
+    <!-- Main Layout -->
+    <div class="content-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Java topics navigation">
+            <h2>Java Topics</h2>
+            <ul>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#syntax">Basic Syntax</a></li>
+                <li><a href="#oop">OOP Concepts</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#exceptions">Exception Handling</a></li>
+                <li><a href="#file">File Handling</a></li>
+                <li><a href="#threads">Multithreading</a></li>
+                <!-- Repeated for scroll test -->
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#syntax">Basic Syntax</a></li>
+                <li><a href="#oop">OOP Concepts</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#exceptions">Exception Handling</a></li>
+                <li><a href="#file">File Handling</a></li>
+                <li><a href="#threads">Multithreading</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <section id="intro">
+                <h2>Introduction to Java</h2>
+                <p>Java is a high-level, object-oriented programming language developed by Sun Microsystems. It is designed to be platform-independent and follows the “Write Once, Run Anywhere” principle.</p>
+            </section>
+
+            <section id="syntax">
+                <h2>Basic Syntax</h2>
+                <p>Every Java program begins with a class definition and a <code>main()</code> method, which serves as the entry point.</p>
+
+<pre class="code-box"><code class="language-java">
+// Simple Java Program
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+</code></pre>
+            </section>
+
+            <section id="oop">
+                <h2>OOP Concepts</h2>
+                <p>Java supports the main OOP principles: Encapsulation, Inheritance, Polymorphism, and Abstraction.</p>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Code && Syntax. All rights reserved.</p>
         <p>Contact us: <a href="mailto:info@syntaxcode.com">info@syntaxcode.com</a></p>
         <a href="#header" class="back-to-top">⬆ Back to Top</a>
     </footer>
+
+    <!-- Sidebar Toggle Script -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const sidebar = document.querySelector('.sidebar');
+        const body = document.body;
+        const links = document.querySelectorAll('.sidebar a');
+
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+            body.classList.toggle('sidebar-open');
+            const isOpen = sidebar.classList.contains('open');
+            menuToggle.setAttribute('aria-expanded', isOpen);
+        });
+
+        // Close sidebar automatically when a link is clicked (on mobile)
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                sidebar.classList.remove('open');
+                body.classList.remove('sidebar-open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
 </body>
 </html>
