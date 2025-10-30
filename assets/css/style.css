@@ -144,7 +144,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-image: url("assets/images/image.png");
+  background-image: url("../images/image.png");
   background-size: cover;
   background-position: center;
   overflow: hidden;
