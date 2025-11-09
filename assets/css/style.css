@@ -115,25 +115,22 @@ body {
   font-size: 1.5rem;
   color: #58a6ff;
   margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.main-content h3 {
+  font-size: 1.2rem;
+  color: #58a6ff;
+  margin-bottom: 12px;
+  margin-top: 12px;
 }
 
 .main-content p {
   margin-bottom: 20px;
+  margin-top: 20px;
   line-height: 1.6;
 }
 
-/* CODE BOX STYLE */
-.code-box {
-  background-color: #161b22;
-  border: 1px solid #30363d;
-  border-radius: 10px;
-  padding: 15px;
-  overflow-x: auto;
-  font-family: "Courier New", monospace;
-  font-size: 0.95rem;
-  color: #9ae6b4;
-  margin-bottom: 20px;
-}
 
 /* INDEX HERO SECTION */
 #index-main {
@@ -301,4 +298,53 @@ footer a:hover {
     margin-left: 0;
     padding: 20px;
   }
+}
+/* #code-box {
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 0 8px rgba(222, 12, 12, 0.2);
+  width: 75%;
+  line-height: 25px;
+  color: aliceblue;
+  font-size: 16px;
+} */
+.examples {
+  padding-left: 30px;
+}
+/* Apply to all <pre><code> blocks */
+pre code {
+  display: block;
+  background-color: #1e1e1e;     /* dark terminal background */
+  color: #00ff88;                /* green terminal text */
+  padding: 15px;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 15px;
+  line-height: 1.5;
+  overflow-x: auto;              /* horizontal scroll if code is long */
+  border: 1px solid #333;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+  white-space: pre-wrap;         /* keeps spacing and wraps text */
+}
+
+/* Optional: Add slight animation like blinking cursor feel */
+pre code::after {
+  content: " ";
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background: #00ff88;
+  animation: blink 1s steps(1) infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+p {
+    width: 60%;
+    
+    text-align: justify;
+    
 }

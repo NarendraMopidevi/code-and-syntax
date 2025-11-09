@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code && Syntax | Java</title>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet">
+
     <!-- External CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <!-- Header -->
     <header class="header" id="header">
@@ -40,8 +43,8 @@
             <ul>
                 <li><a href="#intro">Introduction</a></li>
                 <li><a href="#syntax">Basic Syntax</a></li>
-                <li><a href="#oop">OOP Concepts</a></li>
-                <li><a href="#collections">Collections</a></li>
+                <li><a href="#data-types">Data Types</a></li>
+                <li><a href="#control-statements">Control Statements</a></li>
                 <li><a href="#exceptions">Exception Handling</a></li>
                 <li><a href="#file">File Handling</a></li>
                 <li><a href="#threads">Multithreading</a></li>
@@ -59,23 +62,638 @@
         <!-- Main Content -->
         <main class="main-content">
             <section id="intro">
+                <br>
                 <h2>Introduction to Java</h2>
-                <p>Java is a high-level, object-oriented programming language developed by Sun Microsystems. It is designed to be platform-independent and follows the “Write Once, Run Anywhere” principle.</p>
+                <p><strong>Java</strong> is a powerful, high-level, object-oriented programming language developed by
+                    <strong>Sun Microsystems</strong> (now owned by <strong>Oracle Corporation</strong>) in 1995. It is
+                    designed to be platform-independent and follows the principle of <strong>“Write Once, Run Anywhere”
+                        (WORA)</strong>, meaning code written in Java can run on any system that has a <strong>Java
+                        Virtual Machine (JVM)</strong>.
+                </p>
+
+                <h3>How Java Works</h3>
+                <p>Java programs are first written in source files with a <code>.java</code> extension. These files are
+                    then compiled by the <strong>Java Compiler (javac)</strong> into platform-independent
+                    <strong>bytecode</strong> stored in <code>.class</code> files. The <strong>Java Virtual Machine
+                        (JVM)</strong> executes this bytecode by converting it into machine code for the underlying
+                    operating system.
+                </p>
+                <pre><code>Source Code (.java) → Compiler (javac) → Bytecode (.class) → JVM → Machine Code</code></pre>
+
+                <h3>Key Features of Java</h3>
+                <ul class="examples">
+                    <li><strong>Platform Independent:</strong> Runs on any OS with a JVM.</li>
+                    <li><strong>Object-Oriented:</strong> Based on classes and objects.</li>
+                    <li><strong>Secure:</strong> Provides strong memory management and runs in a sandbox environment.
+                    </li>
+                    <li><strong>Robust:</strong> Has strong error and exception handling features.</li>
+                    <li><strong>Multithreaded:</strong> Supports concurrent task execution.</li>
+                    <li><strong>High Performance:</strong> Uses Just-In-Time (JIT) compilation.</li>
+                    <li><strong>Portable:</strong> Consistent behavior across systems.</li>
+                </ul>
+
+                <h3>Applications of Java</h3>
+                <table border="1" cellpadding="8" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Application Area</th>
+                            <th>Examples</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Web Applications</td>
+                            <td>Spring Boot, JSP, Servlets</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile Applications</td>
+                            <td>Android Development</td>
+                        </tr>
+                        <tr>
+                            <td>Enterprise Applications</td>
+                            <td>ERP, Banking Systems</td>
+                        </tr>
+                        <tr>
+                            <td>Cloud-Based Applications</td>
+                            <td>AWS, Google Cloud Back-End</td>
+                        </tr>
+                        <tr>
+                            <td>Scientific Applications</td>
+                            <td>MATLAB, Simulation Tools</td>
+                        </tr>
+                        <tr>
+                            <td>Big Data Technologies</td>
+                            <td>Hadoop, Spark</td>
+                        </tr>
+                        <tr>
+                            <td>Game Development</td>
+                            <td>LibGDX, jMonkeyEngine</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Benefits of Learning and Using Java</h3>
+                <ul class="examples">
+                    <li>High demand and strong career opportunities.</li>
+                    <li>Extensive community support and open-source tools.</li>
+                    <li>Used across multiple software domains.</li>
+                    <li>Excellent performance with JVM optimizations.</li>
+                    <li>Rich APIs and frameworks like Spring, Hibernate, and Struts.</li>
+                    <li>Easy to learn with a clean and familiar syntax.</li>
+                    <li>Cross-platform compatibility (Windows, macOS, Linux).</li>
+                    <li>Enterprise-level reliability and scalability.</li>
+                </ul>
             </section>
+
 
             <section id="syntax">
                 <h2>Basic Syntax</h2>
-                <p>Every Java program begins with a class definition and a <code>main()</code> method, which serves as the entry point.</p>
+                <p>Every Java program begins with a <strong>class definition</strong> and a <strong>main()</strong>
+                    method, which serves as the <strong>entry point</strong> of execution. The <code>main()</code>
+                    method is where the Java Virtual Machine (JVM) starts running your program.</p>
 
-<pre class="code-box"><code class="language-java">
+                <h3>Example Program</h3>
+                <pre id="code-box"><code>
 // Simple Java Program
+
 class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
     }
 }
-</code></pre>
+    </code></pre>
+
+                <h3>Understanding the main() Method</h3>
+                <p>The line <code>public static void main(String[] args)</code> is special because it tells the Java
+                    Virtual Machine where to start program execution. Let’s break down each part:</p>
+
+                <ul class="examples">
+                    <li><strong>public:</strong> This makes the <code>main()</code> method accessible to the JVM from
+                        outside the class. If it’s not public, the JVM cannot access it and your program won’t start.
+                    </li>
+                    <li><strong>static:</strong> The method belongs to the class, not to any object. The JVM can call it
+                        directly without creating an instance of the class.</li>
+                    <li><strong>void:</strong> The method does not return any value. The JVM executes it and then ends
+                        the program once all instructions are complete.</li>
+                    <li><strong>main:</strong> This is the predefined method name recognized by the JVM as the starting
+                        point of execution.</li>
+                    <li><strong>String[] args:</strong> This parameter represents an <strong>array of strings</strong>
+                        that stores command-line arguments passed when running the program.</li>
+                </ul>
+
+                <h3>How Command-Line Arguments Work</h3>
+                <p>You can pass additional inputs when running your program from the terminal. For example:</p>
+                <pre id="code-box"><code>
+class Example {
+    public static void main(String[] args) {
+        System.out.println("First argument: " + args[0]);
+    }
+}
+    </code></pre>
+
+                <p>When you compile and run it:</p>
+                <pre><code>
+javac Example.java
+java Example Hello
+    </code></pre>
+
+                <p>The output will be:</p>
+                <pre><code>
+First argument: Hello
+    </code></pre>
+
+                <h3>Handling Missing Arguments</h3>
+                <p>If no arguments are passed, the <code>args</code> array will be empty. Accessing <code>args[0]</code>
+                    will cause an error (<code>ArrayIndexOutOfBoundsException</code>). To prevent this, check the array
+                    length first:</p>
+                <pre id="code-box"><code>
+public static void main(String[] args) {
+    if (args.length > 0) {
+        System.out.println("First argument: " + args[0]);
+    } else {
+        System.out.println("No arguments were passed!");
+    }
+}
+    </code></pre>
+
+                <h3>Internal Execution Flow</h3>
+                <ol>
+                    <li>JVM starts and loads the class into memory.</li>
+                    <li>It searches for the method <code>public static void main(String[] args)</code>.</li>
+                    <li>It creates a <code>String</code> array and fills it with command-line arguments.</li>
+                    <li>It executes the statements inside <code>main()</code>.</li>
+                    <li>After completion, the JVM terminates the program.</li>
+                </ol>
+
+                <h3>Key Takeaways</h3>
+                <ul class="examples">
+                    <li><code>main()</code> is the entry point of all standalone Java programs.</li>
+                    <li><code>public</code> ensures JVM can access it; <code>static</code> allows it to run without
+                        objects.</li>
+                    <li><code>String[] args</code> enables passing inputs at runtime.</li>
+                    <li><code>void</code> means it returns no value.</li>
+                </ul>
             </section>
+            <!-- ================== DATA TYPES SECTION ================== -->
+            <section id="data-types">
+                <h2>Java Data Types</h2>
+                <p>
+                    In Java, <strong>data types</strong> define the kind of values a variable can store and the amount
+                    of memory
+                    it will occupy. Java is a <strong>strongly typed</strong> language, meaning every variable must have
+                    a declared
+                    data type before use.
+                </p>
+
+                <h3>🧠 Types of Data Types</h3>
+                <ul class="examples">
+                    <li><strong>Primitive Data Types:</strong> Predefined by Java, used for simple values like numbers
+                        and characters.</li>
+                    <li><strong>Non-Primitive Data Types:</strong> Created by programmers, include classes, arrays, and
+                        interfaces.</li>
+                </ul>
+
+                <h3>💻 Primitive Data Types</h3>
+                <table border="1" cellpadding="8" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Data Type</th>
+                            <th>Size</th>
+                            <th>Example</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>byte</td>
+                            <td>1 byte</td>
+                            <td>byte age = 25;</td>
+                            <td>Stores small integers (-128 to 127)</td>
+                        </tr>
+                        <tr>
+                            <td>short</td>
+                            <td>2 bytes</td>
+                            <td>short salary = 10000;</td>
+                            <td>Stores larger integers than byte</td>
+                        </tr>
+                        <tr>
+                            <td>int</td>
+                            <td>4 bytes</td>
+                            <td>int num = 5000;</td>
+                            <td>Commonly used integer type</td>
+                        </tr>
+                        <tr>
+                            <td>long</td>
+                            <td>8 bytes</td>
+                            <td>long distance = 123456789L;</td>
+                            <td>Stores very large integers</td>
+                        </tr>
+                        <tr>
+                            <td>float</td>
+                            <td>4 bytes</td>
+                            <td>float price = 12.34f;</td>
+                            <td>Stores decimal numbers (less precision)</td>
+                        </tr>
+                        <tr>
+                            <td>double</td>
+                            <td>8 bytes</td>
+                            <td>double rate = 19.99;</td>
+                            <td>Stores decimal numbers (high precision)</td>
+                        </tr>
+                        <tr>
+                            <td>char</td>
+                            <td>2 bytes</td>
+                            <td>char grade = 'A';</td>
+                            <td>Stores a single character or ASCII value</td>
+                        </tr>
+                        <tr>
+                            <td>boolean</td>
+                            <td>1 bit</td>
+                            <td>boolean isValid = true;</td>
+                            <td>Stores true or false values</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>💻 Example Code</h3>
+                <pre><code>
+class DataTypeExample {
+    public static void main(String[] args) {
+        int age = 21;
+        double salary = 35000.50;
+        char grade = 'A';
+        boolean isStudent = true;
+
+        System.out.println("Age: " + age);
+        System.out.println("Salary: " + salary);
+        System.out.println("Grade: " + grade);
+        System.out.println("Is Student: " + isStudent);
+    }
+}
+    </code></pre>
+
+                <h3>🖥️ Output</h3>
+                <pre><code>
+Age: 21
+Salary: 35000.5
+Grade: A
+Is Student: true
+    </code></pre>
+
+                <h3>📋 Key Points</h3>
+                <ul class="examples">
+                    <li>Primitive types are stored by value and have fixed sizes.</li>
+                    <li>Non-primitive types (like Strings) store references, not direct values.</li>
+                    <li>Always choose the smallest data type that can hold your value to optimize memory.</li>
+                </ul>
+            </section>
+
+            <!-- ================== CONTROL STATEMENTS SECTION ================== -->
+            <section id="control-statements">
+                <h2>Java Control Statements</h2>
+                <p>
+                    <strong>Control statements</strong> determine the flow of program execution. They help make
+                    decisions,
+                    repeat tasks, and control which parts of the code execute based on certain conditions.
+                </p>
+
+                <h3>🧠 Types of Control Statements</h3>
+                <ul class="examples">
+                    <li><strong>Decision-making statements:</strong> if, if-else, nested if, switch</li>
+                    <li><strong>Looping statements:</strong> for, while, do-while</li>
+                    <li><strong>Jump statements:</strong> break, continue, return</li>
+                </ul>
+
+                <!-- =================== DECISION MAKING =================== -->
+                <h2>Decision-Making Statements</h2>
+
+                <h3>💡 1. if Statement</h3>
+                <p>
+                    The <code>if</code> statement executes a block of code only when the given condition is
+                    <code>true</code>.
+                </p>
+                <pre><code>
+class IfExample {
+    public static void main(String[] args) {
+        int age = 20;
+        if (age >= 18) {
+            System.out.println("Eligible to vote");
+        }
+    }
+}
+    </code></pre>
+                <h4>🖥️ Output</h4>
+                <pre><code>
+Eligible to vote
+    </code></pre>
+
+                <h3>💡 2. if-else Statement</h3>
+                <p>
+                    The <code>if-else</code> statement provides an alternative block of code when the condition is
+                    <code>false</code>.
+                </p>
+                <pre><code>
+class IfElseExample {
+    public static void main(String[] args) {
+        int num = -10;
+        if (num >= 0) {
+            System.out.println("Positive Number");
+        } else {
+            System.out.println("Negative Number");
+        }
+    }
+}
+    </code></pre>
+                <h4>🖥️ Output</h4>
+                <pre><code>
+Negative Number
+    </code></pre>
+
+                <h3>💡 3. Nested if Statement</h3>
+                <p>
+                    A <code>nested if</code> means one <code>if</code> statement inside another. It is used for multiple
+                    conditional checks.
+                </p>
+                <pre><code>
+class NestedIfExample {
+    public static void main(String[] args) {
+        int age = 25;
+        String nationality = "Indian";
+
+        if (nationality.equals("Indian")) {
+            if (age >= 18) {
+                System.out.println("Eligible to Vote in India");
+            }
+        }
+    }
+}
+    </code></pre>
+                <h4>🖥️ Output</h4>
+                <pre><code>
+Eligible to Vote in India
+    </code></pre>
+
+                <h3>💡 4. switch Statement</h3>
+                <p>
+                    The <code>switch</code> statement executes one case from multiple options based on the value of a
+                    variable.
+                </p>
+                <pre><code>
+class SwitchExample {
+    public static void main(String[] args) {
+        int day = 3;
+        switch (day) {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            default:
+                System.out.println("Invalid Day");
+        }
+    }
+}
+    </code></pre>
+                <h4>🖥️ Output</h4>
+                <pre><code>
+Wednesday
+    </code></pre>
+
+                <!-- =================== LOOPING =================== -->
+                <h2>Looping Statements</h2>
+
+                <h3>💡 1. for Loop</h3>
+                <p>
+                    The <code>for</code> loop executes a block of code a specific number of times.
+                </p>
+                <pre><code>
+class ForLoopExample {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Count: " + i);
+        }
+    }
+}
+    </code></pre>
+                <h4>🖥️ Output</h4>
+                <pre><code>
+Count: 1
+Count: 2
+Count: 3
+Count: 4
+Count: 5
+    </code></pre>
+
+                <h3>💡 2. while Loop</h3>
+                <p>
+                    The <code>while</code> loop executes repeatedly as long as the condition remains <code>true</code>.
+                </p>
+                <pre><code>
+class WhileExample {
+    public static void main(String[] args) {
+        int i = 1;
+        while (i <= 3) {
+            System.out.println("Iteration: " + i);
+            i++;
+        }
+    }
+}
+    </code></pre>
+                <h4>🖥️ Output</h4>
+                <pre><code>
+Iteration: 1
+Iteration: 2
+Iteration: 3
+    </code></pre>
+
+                <h3>💡 3. do-while Loop</h3>
+                <p>
+                    The <code>do-while</code> loop executes the block at least once before checking the condition.
+                </p>
+                <pre><code>
+class DoWhileExample {
+    public static void main(String[] args) {
+        int i = 1;
+        do {
+            System.out.println("Value: " + i);
+            i++;
+        } while (i <= 3);
+    }
+}
+    </code></pre>
+                <h4>🖥️ Output</h4>
+                <pre><code>
+Value: 1
+Value: 2
+Value: 3
+    </code></pre>
+
+                <!-- =================== JUMP STATEMENTS =================== -->
+                <h2>Jump Statements</h2>
+
+                <h3>💡 1. break Statement</h3>
+                <p>
+                    The <code>break</code> statement is used to exit from a loop or switch block before it naturally
+                    ends.
+                </p>
+                <pre><code>
+class BreakExample {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            if (i == 3) break;
+            System.out.println("i = " + i);
+        }
+    }
+}
+    </code></pre>
+                <h4>🖥️ Output</h4>
+                <pre><code>
+i = 1
+i = 2
+    </code></pre>
+
+                <h3>💡 2. continue Statement</h3>
+                <p>
+                    The <code>continue</code> statement skips the current iteration and continues with the next loop
+                    cycle.
+                </p>
+                <pre><code>
+class ContinueExample {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            if (i == 3) continue;
+            System.out.println("i = " + i);
+        }
+    }
+}
+    </code></pre>
+                <h4>🖥️ Output</h4>
+                <pre><code>
+i = 1
+i = 2
+i = 4
+i = 5
+    </code></pre>
+
+                <h3>💡 3. return Statement</h3>
+                <p>
+                    The <code>return</code> statement exits a method and optionally returns a value to the caller.
+                </p>
+                <pre><code>
+class ReturnExample {
+    public static void main(String[] args) {
+        int result = addNumbers(5, 10);
+        System.out.println("Sum: " + result);
+    }
+
+    static int addNumbers(int a, int b) {
+        return a + b; // returns the sum
+    }
+}
+    </code></pre>
+                <h4>🖥️ Output</h4>
+                <pre><code>
+Sum: 15
+    </code></pre>
+
+                <!-- =================== SUMMARY =================== -->
+                <h3>📋 Summary</h3>
+                <ul class="examples">
+                    <li><code>if</code>, <code>if-else</code>, and <code>switch</code> handle decision-making.</li>
+                    <li><code>for</code>, <code>while</code>, and <code>do-while</code> handle repetitive tasks.</li>
+                    <li><code>break</code>, <code>continue</code>, and <code>return</code> control the flow within loops
+                        and methods.</li>
+                    <li>Combining these statements creates logical, dynamic, and flexible programs.</li>
+                </ul>
+            </section>
+<section id="codes-explanation">
+                <h2>🔹Codes & implementation</h2>
+                <p>
+                    In this section, we’ll dive into simple yet powerful Java programs — explaining how they work and how to write them better. You’ll also see side-by-side comparisons to understand which approach works best in real scenarios. Before jumping in, make sure you’re comfortable with Java’s basic data types and control statements, as they form the foundation for everything ahead.
+                </p>
+
+                <h3>🧠 Explanation</h3>
+                <p>
+                    Explain how it works, why it’s used, and when to use it.
+                    You can use bullet points for clarity.
+                </p>
+                <ul class="examples">
+                    <li>First key point about the topic.</li>
+                    <li>Second key detail.</li>
+                    <li>Third important note.</li>
+                </ul>
+
+                <h3>💻 Example Code</h3>
+                <pre><code>
+// Example Java Code
+class TopicExample {
+    public static void main(String[] args) {
+        System.out.println("This is an example of your topic!");
+    }
+}
+    </code></pre>
+
+                <h3>🖥️ Output</h3>
+                <pre><code>
+This is an example of your topic!
+    </code></pre>
+
+                <h3>📋 Key Points</h3>
+                <ul class="examples">
+                    <li>Summarize the concept briefly.</li>
+                    <li>Mention common use cases.</li>
+                    <li>Highlight errors to avoid.</li>
+                </ul>
+            </section>
+
+            <!-- ================== TEMPLATE SECTION ================== -->
+            <section id="topic-id">
+                <h2>🔹 Topic Title</h2>
+                <p>
+                    Give a clear, short explanation of the concept here.
+                    You can include <strong>keywords</strong>, <code>inline code</code>,
+                    and simple examples in text.
+                </p>
+
+                <h3>🧠 Explanation</h3>
+                <p>
+                    Explain how it works, why it’s used, and when to use it.
+                    You can use bullet points for clarity.
+                </p>
+                <ul class="examples">
+                    <li>First key point about the topic.</li>
+                    <li>Second key detail.</li>
+                    <li>Third important note.</li>
+                </ul>
+
+                <h3>💻 Example Code</h3>
+                <pre><code>
+// Example Java Code
+class TopicExample {
+    public static void main(String[] args) {
+        System.out.println("This is an example of your topic!");
+    }
+}
+    </code></pre>
+
+                <h3>🖥️ Output</h3>
+                <pre><code>
+This is an example of your topic!
+    </code></pre>
+
+                <h3>📋 Key Points</h3>
+                <ul class="examples">
+                    <li>Summarize the concept briefly.</li>
+                    <li>Mention common use cases.</li>
+                    <li>Highlight errors to avoid.</li>
+                </ul>
+            </section>
+
+
 
             <section id="oop">
                 <h2>OOP Concepts</h2>
@@ -115,4 +733,5 @@ class HelloWorld {
         });
     </script>
 </body>
+
 </html>
