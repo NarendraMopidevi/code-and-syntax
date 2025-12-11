@@ -28,7 +28,7 @@
                 <li><a href="spl-page.html">SQL</a></li>
                 <li><a href="dsa-page.html">Data Structures & Algorithms</a></li>
                 <li><a href="about.html">About</a></li>
-            </ul>
+            </ul></div>
         </nav>
 
         <!-- Mobile Menu Button -->
@@ -39,49 +39,48 @@
     <div class="content-container">
         <!-- Sidebar -->
         <aside class="sidebar" aria-label="Java topics navigation">
-            <h2>Java Topics</h2>
-            <ul>
-                <li><a href="#intro">Introduction</a></li>
-                <li><a href="#syntax">Basic Syntax</a></li>
-                <li><a href="#data-types">Data Types</a></li>
-                <li><a href="#control-statements">Control Statements</a></li>
-                <li><a href="#exceptions">Exception Handling</a></li>
-                <li><a href="#file">File Handling</a></li>
-                <li><a href="#threads">Multithreading</a></li>
-                <!-- Repeated for scroll test -->
-                <li><a href="#intro">Introduction</a></li>
-                <li><a href="#syntax">Basic Syntax</a></li>
-                <li><a href="#oop">OOP Concepts</a></li>
-                <li><a href="#collections">Collections</a></li>
-                <li><a href="#exceptions">Exception Handling</a></li>
-                <li><a href="#file">File Handling</a></li>
-                <li><a href="#threads">Multithreading</a></li>
-            </ul>
-        </aside>
+    <h2>Java Topics</h2>
+    <ul>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#syntax">Basic Syntax</a></li>
+        <li><a href="#data-types">Data Types</a></li>
+        <li><a href="#control-statements">Control Statements</a></li>
+        <li><a href="#exceptions">Exception Handling</a></li>
+        <li><a href="#file">File Handling</a></li>
+        <li><a href="#threads">Multithreading</a></li>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#syntax">Basic Syntax</a></li>
+        <li><a href="#oop">OOP Concepts</a></li>
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#exceptions">Exception Handling</a></li>
+        <li><a href="#file">File Handling</a></li>
+        <li><a href="#threads">Multithreading</a></li>
+    </ul>
+</aside>
+
 
         <!-- Main Content -->
         <main class="main-content">
             <section id="intro">
-                <br>
-                <h2>Introduction to Java</h2>
-                <p><strong>Java</strong> is a powerful, high-level, object-oriented programming language developed by
+                <h2>=>Introduction to Java</h2>
+                <div><strong>Java</strong> is a powerful, high-level, object-oriented programming language developed by
                     <strong>Sun Microsystems</strong> (now owned by <strong>Oracle Corporation</strong>) in 1995. It is
                     designed to be platform-independent and follows the principle of <strong>“Write Once, Run Anywhere”
                         (WORA)</strong>, meaning code written in Java can run on any system that has a <strong>Java
                         Virtual Machine (JVM)</strong>.
-                </p>
+                </div></p>
 
                 <h3>How Java Works</h3>
-                <p>Java programs are first written in source files with a <code>.java</code> extension. These files are
+                <div>Java programs are first written in source files with a <code>.java</code> extension. These files are
                     then compiled by the <strong>Java Compiler (javac)</strong> into platform-independent
                     <strong>bytecode</strong> stored in <code>.class</code> files. The <strong>Java Virtual Machine
                         (JVM)</strong> executes this bytecode by converting it into machine code for the underlying
                     operating system.
-                </p>
+                </div></p>
                 <pre><code>Source Code (.java) → Compiler (javac) → Bytecode (.class) → JVM → Machine Code</code></pre>
 
                 <h3>Key Features of Java</h3>
-                <ul class="examples">
+                <div class = "list-items"><ul class="examples">
                     <li><strong>Platform Independent:</strong> Runs on any OS with a JVM.</li>
                     <li><strong>Object-Oriented:</strong> Based on classes and objects.</li>
                     <li><strong>Secure:</strong> Provides strong memory management and runs in a sandbox environment.
@@ -90,7 +89,7 @@
                     <li><strong>Multithreaded:</strong> Supports concurrent task execution.</li>
                     <li><strong>High Performance:</strong> Uses Just-In-Time (JIT) compilation.</li>
                     <li><strong>Portable:</strong> Consistent behavior across systems.</li>
-                </ul>
+                </ul></div>
 
                 <h3>Applications of Java</h3>
                 <table border="1" cellpadding="8" cellspacing="0">
@@ -133,7 +132,7 @@
                 </table>
 
                 <h3>Benefits of Learning and Using Java</h3>
-                <ul class="examples">
+                <div class = "list-items"><ul class="examples">
                     <li>High demand and strong career opportunities.</li>
                     <li>Extensive community support and open-source tools.</li>
                     <li>Used across multiple software domains.</li>
@@ -142,15 +141,15 @@
                     <li>Easy to learn with a clean and familiar syntax.</li>
                     <li>Cross-platform compatibility (Windows, macOS, Linux).</li>
                     <li>Enterprise-level reliability and scalability.</li>
-                </ul>
+                </ul></div>
             </section>
 
 
             <section id="syntax">
                 <h2>Basic Syntax</h2>
-                <p>Every Java program begins with a <strong>class definition</strong> and a <strong>main()</strong>
+                <div>Every Java program begins with a <strong>class definition</strong> and a <strong>main()</strong>
                     method, which serves as the <strong>entry point</strong> of execution. The <code>main()</code>
-                    method is where the Java Virtual Machine (JVM) starts running your program.</p>
+                    method is where the Java Virtual Machine (JVM) starts running your program.</div></p>
 
                 <h3>Example Program</h3>
                 <pre id="code-box"><code>
@@ -164,10 +163,10 @@ class HelloWorld {
     </code></pre>
 
                 <h3>Understanding the main() Method</h3>
-                <p>The line <code>public static void main(String[] args)</code> is special because it tells the Java
-                    Virtual Machine where to start program execution. Let’s break down each part:</p>
+                <div>The line <code>public static void main(String[] args)</code> is special because it tells the Java
+                    Virtual Machine where to start program execution. Let’s break down each part:</div></p>
 
-                <ul class="examples">
+                <div class = "list-items"><ul class="examples">
                     <li><strong>public:</strong> This makes the <code>main()</code> method accessible to the JVM from
                         outside the class. If it’s not public, the JVM cannot access it and your program won’t start.
                     </li>
@@ -179,10 +178,10 @@ class HelloWorld {
                         point of execution.</li>
                     <li><strong>String[] args:</strong> This parameter represents an <strong>array of strings</strong>
                         that stores command-line arguments passed when running the program.</li>
-                </ul>
+                </ul></div>
 
                 <h3>How Command-Line Arguments Work</h3>
-                <p>You can pass additional inputs when running your program from the terminal. For example:</p>
+                <div>You can pass additional inputs when running your program from the terminal. For example:</div></p>
                 <pre id="code-box"><code>
 class Example {
     public static void main(String[] args) {
@@ -191,21 +190,21 @@ class Example {
 }
     </code></pre>
 
-                <p>When you compile and run it:</p>
+                <div>When you compile and run it:</div></p>
                 <pre><code>
 javac Example.java
 java Example Hello
     </code></pre>
 
-                <p>The output will be:</p>
+                <div>The output will be:</div></p>
                 <pre><code>
 First argument: Hello
     </code></pre>
 
                 <h3>Handling Missing Arguments</h3>
-                <p>If no arguments are passed, the <code>args</code> array will be empty. Accessing <code>args[0]</code>
+                <div>If no arguments are passed, the <code>args</code> array will be empty. Accessing <code>args[0]</code>
                     will cause an error (<code>ArrayIndexOutOfBoundsException</code>). To prevent this, check the array
-                    length first:</p>
+                    length first:</div></p>
                 <pre id="code-box"><code>
 public static void main(String[] args) {
     if (args.length > 0) {
@@ -226,32 +225,32 @@ public static void main(String[] args) {
                 </ol>
 
                 <h3>Key Takeaways</h3>
-                <ul class="examples">
+                <div class = "list-items"><ul class="examples">
                     <li><code>main()</code> is the entry point of all standalone Java programs.</li>
                     <li><code>public</code> ensures JVM can access it; <code>static</code> allows it to run without
                         objects.</li>
                     <li><code>String[] args</code> enables passing inputs at runtime.</li>
                     <li><code>void</code> means it returns no value.</li>
-                </ul>
+                </ul></div>
             </section>
             <!-- ================== DATA TYPES SECTION ================== -->
             <section id="data-types">
                 <h2>Java Data Types</h2>
-                <p>
+                <div>
                     In Java, <strong>data types</strong> define the kind of values a variable can store and the amount
                     of memory
                     it will occupy. Java is a <strong>strongly typed</strong> language, meaning every variable must have
                     a declared
                     data type before use.
-                </p>
+                </div></p>
 
                 <h3>🧠 Types of Data Types</h3>
-                <ul class="examples">
+                <div class = "list-items"><ul class="examples">
                     <li><strong>Primitive Data Types:</strong> Predefined by Java, used for simple values like numbers
                         and characters.</li>
                     <li><strong>Non-Primitive Data Types:</strong> Created by programmers, include classes, arrays, and
                         interfaces.</li>
-                </ul>
+                </ul></div>
 
                 <h3>💻 Primitive Data Types</h3>
                 <table border="1" cellpadding="8" cellspacing="0">
@@ -341,37 +340,37 @@ Is Student: true
     </code></pre>
 
                 <h3>📋 Key Points</h3>
-                <ul class="examples">
+                <div class = "list-items"><ul class="examples">
                     <li>Primitive types are stored by value and have fixed sizes.</li>
                     <li>Non-primitive types (like Strings) store references, not direct values.</li>
                     <li>Always choose the smallest data type that can hold your value to optimize memory.</li>
-                </ul>
+                </ul></div>
             </section>
 
             <!-- ================== CONTROL STATEMENTS SECTION ================== -->
             <section id="control-statements">
                 <h2>Java Control Statements</h2>
-                <p>
+                <div>
                     <strong>Control statements</strong> determine the flow of program execution. They help make
                     decisions,
                     repeat tasks, and control which parts of the code execute based on certain conditions.
-                </p>
+                </div></p>
 
                 <h3>🧠 Types of Control Statements</h3>
-                <ul class="examples">
+                <div class = "list-items"><ul class="examples">
                     <li><strong>Decision-making statements:</strong> if, if-else, nested if, switch</li>
                     <li><strong>Looping statements:</strong> for, while, do-while</li>
                     <li><strong>Jump statements:</strong> break, continue, return</li>
-                </ul>
+                </ul></div>
 
                 <!-- =================== DECISION MAKING =================== -->
                 <h2>Decision-Making Statements</h2>
 
                 <h3>💡 1. if Statement</h3>
-                <p>
+                <div>
                     The <code>if</code> statement executes a block of code only when the given condition is
                     <code>true</code>.
-                </p>
+                </div></p>
                 <pre><code>
 class IfExample {
     public static void main(String[] args) {
@@ -388,10 +387,10 @@ Eligible to vote
     </code></pre>
 
                 <h3>💡 2. if-else Statement</h3>
-                <p>
+                <div>
                     The <code>if-else</code> statement provides an alternative block of code when the condition is
                     <code>false</code>.
-                </p>
+                </div></p>
                 <pre><code>
 class IfElseExample {
     public static void main(String[] args) {
@@ -410,10 +409,10 @@ Negative Number
     </code></pre>
 
                 <h3>💡 3. Nested if Statement</h3>
-                <p>
+                <div class = "para"><p>
                     A <code>nested if</code> means one <code>if</code> statement inside another. It is used for multiple
                     conditional checks.
-                </p>
+                </div></p>
                 <pre><code>
 class NestedIfExample {
     public static void main(String[] args) {
@@ -434,10 +433,10 @@ Eligible to Vote in India
     </code></pre>
 
                 <h3>💡 4. switch Statement</h3>
-                <p>
+                <div class = "para"><p>
                     The <code>switch</code> statement executes one case from multiple options based on the value of a
                     variable.
-                </p>
+                </div></p>
                 <pre><code>
 class SwitchExample {
     public static void main(String[] args) {
@@ -467,9 +466,9 @@ Wednesday
                 <h2>Looping Statements</h2>
 
                 <h3>💡 1. for Loop</h3>
-                <p>
+                <div class = "para"><p>
                     The <code>for</code> loop executes a block of code a specific number of times.
-                </p>
+                </div></p>
                 <pre><code>
 class ForLoopExample {
     public static void main(String[] args) {
@@ -489,9 +488,9 @@ Count: 5
     </code></pre>
 
                 <h3>💡 2. while Loop</h3>
-                <p>
+                <div class = "para"><p>
                     The <code>while</code> loop executes repeatedly as long as the condition remains <code>true</code>.
-                </p>
+                </div></p>
                 <pre><code>
 class WhileExample {
     public static void main(String[] args) {
@@ -511,9 +510,9 @@ Iteration: 3
     </code></pre>
 
                 <h3>💡 3. do-while Loop</h3>
-                <p>
+                <div class = "para"><p>
                     The <code>do-while</code> loop executes the block at least once before checking the condition.
-                </p>
+                </div></p>
                 <pre><code>
 class DoWhileExample {
     public static void main(String[] args) {
@@ -536,10 +535,10 @@ Value: 3
                 <h2>Jump Statements</h2>
 
                 <h3>💡 1. break Statement</h3>
-                <p>
+                <div class = "para"><p>
                     The <code>break</code> statement is used to exit from a loop or switch block before it naturally
                     ends.
-                </p>
+                </div></p>
                 <pre><code>
 class BreakExample {
     public static void main(String[] args) {
@@ -557,10 +556,10 @@ i = 2
     </code></pre>
 
                 <h3>💡 2. continue Statement</h3>
-                <p>
+                <div class = "para"><p>
                     The <code>continue</code> statement skips the current iteration and continues with the next loop
                     cycle.
-                </p>
+                </div></p>
                 <pre><code>
 class ContinueExample {
     public static void main(String[] args) {
@@ -580,9 +579,9 @@ i = 5
     </code></pre>
 
                 <h3>💡 3. return Statement</h3>
-                <p>
+                <div class = "para"><p>
                     The <code>return</code> statement exits a method and optionally returns a value to the caller.
-                </p>
+                </div></p>
                 <pre><code>
 class ReturnExample {
     public static void main(String[] args) {
@@ -602,30 +601,30 @@ Sum: 15
 
                 <!-- =================== SUMMARY =================== -->
                 <h3>📋 Summary</h3>
-                <ul class="examples">
+                <div class = "list-items"><ul class="examples">
                     <li><code>if</code>, <code>if-else</code>, and <code>switch</code> handle decision-making.</li>
                     <li><code>for</code>, <code>while</code>, and <code>do-while</code> handle repetitive tasks.</li>
                     <li><code>break</code>, <code>continue</code>, and <code>return</code> control the flow within loops
                         and methods.</li>
                     <li>Combining these statements creates logical, dynamic, and flexible programs.</li>
-                </ul>
+                </ul></div>
             </section>
 <section id="codes-explanation">
                 <h2>🔹Codes & implementation</h2>
-                <p>
+                <div class = "para"><p>
                     In this section, we’ll dive into simple yet powerful Java programs — explaining how they work and how to write them better. You’ll also see side-by-side comparisons to understand which approach works best in real scenarios. Before jumping in, make sure you’re comfortable with Java’s basic data types and control statements, as they form the foundation for everything ahead.
-                </p>
+                </div></p>
 
                 <h3>🧠 Explanation</h3>
-                <p>
+                <div class = "para"><p>
                     Explain how it works, why it’s used, and when to use it.
                     You can use bullet points for clarity.
-                </p>
-                <ul class="examples">
+                </div></p>
+                <div class = "list-items"><ul class="examples">
                     <li>First key point about the topic.</li>
                     <li>Second key detail.</li>
                     <li>Third important note.</li>
-                </ul>
+                </ul></div>
 
                 <h3>💻 Example Code</h3>
                 <pre><code>
@@ -643,32 +642,32 @@ This is an example of your topic!
     </code></pre>
 
                 <h3>📋 Key Points</h3>
-                <ul class="examples">
+                <div class = "list-items"><ul class="examples">
                     <li>Summarize the concept briefly.</li>
                     <li>Mention common use cases.</li>
                     <li>Highlight errors to avoid.</li>
-                </ul>
+                </ul></div>
             </section>
 
             <!-- ================== TEMPLATE SECTION ================== -->
             <section id="topic-id">
                 <h2>🔹 Topic Title</h2>
-                <p>
+                <div class = "para"><p>
                     Give a clear, short explanation of the concept here.
                     You can include <strong>keywords</strong>, <code>inline code</code>,
                     and simple examples in text.
-                </p>
+                </div></p>
 
                 <h3>🧠 Explanation</h3>
-                <p>
+                <div>
                     Explain how it works, why it’s used, and when to use it.
                     You can use bullet points for clarity.
-                </p>
-                <ul class="examples">
+                </div></p>
+                <div class = "list-items"><ul class="examples">
                     <li>First key point about the topic.</li>
                     <li>Second key detail.</li>
                     <li>Third important note.</li>
-                </ul>
+                </ul></div>
 
                 <h3>💻 Example Code</h3>
                 <pre><code>
@@ -686,26 +685,26 @@ This is an example of your topic!
     </code></pre>
 
                 <h3>📋 Key Points</h3>
-                <ul class="examples">
+                <div class = "list-items"><ul class="examples">
                     <li>Summarize the concept briefly.</li>
                     <li>Mention common use cases.</li>
                     <li>Highlight errors to avoid.</li>
-                </ul>
+                </ul></div>
             </section>
 
 
 
             <section id="oop">
                 <h2>OOP Concepts</h2>
-                <p>Java supports the main OOP principles: Encapsulation, Inheritance, Polymorphism, and Abstraction.</p>
+                <div>Java supports the main OOP principles: Encapsulation, Inheritance, Polymorphism, and Abstraction.</div></p>
             </section>
         </main>
     </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Code && Syntax. All rights reserved.</p>
-        <p>Contact us: <a href="mailto:info@syntaxcode.com">info@syntaxcode.com</a></p>
+        <div>&copy; 2025 Code && Syntax. All rights reserved.</div></p>
+        <div>Contact us: <a href="mailto:info@syntaxcode.com">info@syntaxcode.com</a></div></p>
         <a href="#header" class="back-to-top">⬆ Back to Top</a>
     </footer>
 

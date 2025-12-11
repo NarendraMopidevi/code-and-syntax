@@ -21,27 +21,35 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 40px;
+  padding: 12px 30px;
   border-bottom: 2px solid #30363d;
-  position: fixed;          /* ✅ Keeps header fixed at top */
-  top: 0;                   /* ✅ Stick to top of the viewport */
+  position: fixed;
+  top: 0;
   left: 0;
-  width: 100%;              /* ✅ Full width */
-  z-index: 1000;            /* ✅ Ensures it's above sidebar and content */
+  width: 100%;
+  z-index: 1000;
+  flex-wrap: wrap;
 }
 
 .header h1 {
   font-family: "Montserrat", sans-serif;
   color: #58a6ff;
-  font-size: 1.8rem;
-  letter-spacing: 1px;
+  font-size: 1.6rem;
+}
+
+.list-items {
+  padding-left:25px
+}
+.examples {
+  list-style-type: disc;
 }
 
 .header nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 18px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .header nav ul li a {
@@ -56,22 +64,34 @@ body {
   color: #58a6ff;
 }
 
+/* ========== MENU TOGGLE (Mobile) ========== */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: #58a6ff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
 /* ========== LAYOUT ========== */
 .content-container {
   flex: 1;
   display: flex;
   position: relative;
+  margin-top: 70px;
 }
 
 /* SIDEBAR */
 .sidebar {
-  width: 220px;
+  width: 230px;
   background-color: #161b22;
   padding: 20px;
   border-right: 2px solid #30363d;
   position: sticky;
-  top: 80px;
-  height: calc(100vh - 80px);
+  top: 70px;
+  height: calc(100vh - 70px);
   overflow-y: auto;
   transition: all 0.3s ease;
 }
@@ -108,29 +128,30 @@ body {
 .main-content {
   flex: 1;
   padding: 30px;
-  margin-left: 5px;
+  margin-top : 0px;
+  margin-left: 10px;
+  min-width: 0;
 }
 
 .main-content h2 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #58a6ff;
-  margin-bottom: 15px;
-  margin-top: 15px;
+  margin: 20px 0 10px;
 }
 
 .main-content h3 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #58a6ff;
-  margin-bottom: 12px;
-  margin-top: 12px;
+  margin: 15px 0 10px;
 }
 
 .main-content p {
-  margin-bottom: 20px;
-  margin-top: 20px;
-  line-height: 1.6;
+  line-height: 1.7;
+  margin: 15px 0;
+  text-align: justify;
+  width: 100%;
+  max-width: 900px;
 }
-
 
 /* INDEX HERO SECTION */
 #index-main {
@@ -145,67 +166,36 @@ body {
   background-size: cover;
   background-position: center;
   overflow: hidden;
-  margin-bottom: 0;
 }
 
 /* BUTTON */
 .btn {
   display: inline-block;
-  border-style: groove;
-  border-width: 2px;
-  border-color: #58a6ff;
+  border: 2px groove #58a6ff;
   color: #58a6ff;
-  padding: 8px 18px;
-  border-radius: 70px;
+  padding: 10px 22px;
+  border-radius: 50px;
   background-color: #21262d;
   font-weight: 600;
   font-size: 1rem;
   text-decoration: none;
   cursor: pointer;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   transition: all 0.3s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 
-/* Hover effect */
 .btn:hover {
   background-color: #58a6ff;
   color: #0d1117;
   transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(88, 166, 255, 0.4);
 }
 
-/* Click / Active state */
-.btn:active {
-  transform: scale(0.95);
-  background-color: #1f6feb;
-  box-shadow: 0 2px 6px rgba(31, 111, 235, 0.5);
-}
-
-/* Focus state */
-.btn:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.6);
-}
-
-/* Disabled state */
-.btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-  background-color: #2d333b;
-  color: #8b949e;
-  border-color: #8b949e;
-}
-
-/* ========== FOOTER ========== */
+/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
   background-color: #161b22;
   border-top: 2px solid #30363d;
-  margin-top: 40px;
   color: #8b949e;
 }
 
@@ -218,117 +208,27 @@ footer a:hover {
   text-decoration: underline;
 }
 
-.back-to-top {
-  display: inline-block;
-  margin-top: 10px;
-  color: #58a6ff;
-  text-decoration: none;
+
+#code-box {
+  margin-bottom: 15px;
 }
-
-.back-to-top:hover {
-  text-decoration: underline;
-}
-
-/* ===== MENU TOGGLE BUTTON ===== */
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  color: #58a6ff;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 1100;
-}
-
-/* ========== RESPONSIVE ========== */
-@media (max-width: 900px) {
-  /* Header Adjustments */
-  .header {
-    flex-direction: column;
-    text-align: center;
-    padding: 15px 20px;
-  }
-
-  .header nav ul {
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .menu-toggle {
-    display: block;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-  }
-
-  /* Sidebar as Sliding Drawer */
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    height: 100vh;
-    width: 220px;
-    background-color: #161b22;
-    border-right: 2px solid #30363d;
-    overflow-y: auto;
-    transition: left 0.3s ease;
-    z-index: 1050;
-    padding-top: 80px;
-  }
-
-  .sidebar.open {
-    left: 0;
-  }
-
-  /* Dim background when sidebar open */
-  body.sidebar-open::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1040;
-  }
-
-  /* Main content */
-  .content-container {
-    flex-direction: column;
-  }
-
-  .main-content {
-    margin-left: 0;
-    padding: 20px;
-  }
-}
-/* #code-box {
-  border: 2px solid #007bff;
-  border-radius: 10px;
-  padding: 12px;
-  box-shadow: 0 0 8px rgba(222, 12, 12, 0.2);
-  width: 75%;
-  line-height: 25px;
-  color: aliceblue;
-  font-size: 16px;
-} */
-.examples {
-  padding-left: 30px;
-}
-/* Apply to all <pre><code> blocks */
+/* CODE BLOCKS */
 pre code {
   display: block;
-  background-color: #1e1e1e;     /* dark terminal background */
-  color: #00ff88;                /* green terminal text */
+  background-color: #1e1e1e;
+  color: #00ff88;
   padding: 15px;
   border-radius: 8px;
   font-family: 'Courier New', monospace;
   font-size: 15px;
   line-height: 1.5;
-  overflow-x: auto;              /* horizontal scroll if code is long */
+  overflow-x: auto;
   border: 1px solid #333;
   box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
-  white-space: pre-wrap;         /* keeps spacing and wraps text */
+  white-space: pre-wrap;
 }
 
-/* Optional: Add slight animation like blinking cursor feel */
+/* Cursor animation */
 pre code::after {
   content: " ";
   display: inline-block;
@@ -338,13 +238,136 @@ pre code::after {
   animation: blink 1s steps(1) infinite;
   vertical-align: middle;
 }
-
 @keyframes blink {
   50% { opacity: 0; }
 }
-p {
-    width: 60%;
-    
-    text-align: justify;
-    
+
+/* HERO CONTENT */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  width: 90%;
+  max-width: 900px;
+  color: #c9d1d9;
+  border-style:inherit;
+  margin: 20px 25px;
+  padding:20px 25px;
+  border-radius: 30px;
+  background-color: rgba(13, 10, 34, 0.471);
+}
+.hero-content h1 {
+  font-size: 2.2rem;
+  color: #58a6ff;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #e6edf3;
+}
+
+/* ========== RESPONSIVE STYLES ========== */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 200px;
+  }
+  .main-content {
+    padding: 20px;
+  }
+  .header h1 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+  }
+
+  .header nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Sidebar turns into drawer */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100vh;
+    width: 220px;
+    background-color: #161b22;
+    z-index: 1050;
+    padding-top: 80px;
+    transition: left 0.3s ease;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  body.sidebar-open::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1040;
+  }
+
+  .main-content {
+    margin: 0;
+    padding: 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  table {
+    width: 100%;
+    font-size: 0.9rem;
+    overflow-x: auto;
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .main-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .main-content h3 {
+    font-size: 1.1rem;
+  }
+
+  pre code {
+    font-size: 13px;
+    padding: 10px;
+  }
+}
+.para {
+  align-items: center;
+  align-content: center;
 }
