@@ -1,38 +1,216 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
-    <meata charset = "UTF-8">
-    <meta name ="viewport" content="width=device-width, initial-scale">
-    <title>sql-page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-    <link rel = "stylesheet" href = "assets\css\style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code &amp;&amp; Syntax | SQL</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div id="master-title">
-            <h1>Code && Syntax</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="java-page.html">Java</a></li>
-                <li><a href="python-page.html">Python</a></li>
-                <li><a href="spl-page.html">SQL</a></li>
-                <li><a href="dsa-page.html">Data Structures & Algorithms</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main> 
-    </main>
-    <aside>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div id="master-title"><h1>Code &amp;&amp; Syntax</h1></div>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="java-page.html">Java</a></li>
+        <li><a href="python-page.html">Python</a></li>
+        <li><a href="spl-page.html" class="active">SQL</a></li>
+        <li><a href="dsa-page.html">DSA</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" aria-label="Toggle sidebar" aria-expanded="false">☰</button>
+  </header>
+
+  <div class="content-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" aria-label="SQL topics">
+      <h2>SQL Topics</h2>
+      <ul>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#select">SELECT Statement</a></li>
+        <li><a href="#where">WHERE Clause</a></li>
+        <li><a href="#joins">JOINs</a></li>
+        <li><a href="#aggregate">Aggregate Functions</a></li>
+        <li><a href="#groupby">GROUP BY &amp; HAVING</a></li>
+        <li><a href="#subquery">Subqueries</a></li>
+        <li><a href="#ddl">DDL Commands</a></li>
+      </ul>
     </aside>
-    <footer>
-        <p>&copy; 2025 Code && Syntax. All rights reserved.</p>
-        <p>Contact us: <a href="mailto:info@syntaxcode.com">info@syntaxcode.com</a></p>
-        <a href="#header" class="back-to-top">⬆ Back to Top</a>
-    </footer>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <section id="intro">
+        <h2>Introduction to SQL</h2>
+        <p><strong>SQL (Structured Query Language)</strong> is the standard language used to communicate with relational databases. It allows you to create, read, update, and delete data stored in tables.</p>
+        <p><em>Detailed content coming soon.</em></p>
+      </section>
+
+      <section id="select">
+        <h2>SELECT Statement</h2>
+        <p>The <code>SELECT</code> statement retrieves data from one or more tables.</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">SQL</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>SELECT name, age FROM students;
+
+-- Select all columns
+SELECT * FROM students;</code></pre>
+        </div>
+      </section>
+
+      <section id="where">
+        <h2>WHERE Clause</h2>
+        <p>The <code>WHERE</code> clause filters records based on a condition.</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">SQL</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>SELECT * FROM students WHERE age > 18;
+
+SELECT * FROM students WHERE name = 'Alice';</code></pre>
+        </div>
+      </section>
+
+      <section id="joins">
+        <h2>JOINs</h2>
+        <p>JOINs combine rows from two or more tables based on a related column.</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">SQL</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>-- INNER JOIN
+SELECT students.name, courses.course_name
+FROM students
+INNER JOIN enrollments ON students.id = enrollments.student_id
+INNER JOIN courses ON enrollments.course_id = courses.id;</code></pre>
+        </div>
+      </section>
+
+      <section id="aggregate">
+        <h2>Aggregate Functions</h2>
+        <p>Aggregate functions perform calculations on a set of values and return a single result.</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">SQL</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>SELECT COUNT(*) FROM students;
+SELECT AVG(age) FROM students;
+SELECT MAX(score), MIN(score) FROM results;
+SELECT SUM(salary) FROM employees;</code></pre>
+        </div>
+      </section>
+
+      <section id="groupby">
+        <h2>GROUP BY &amp; HAVING</h2>
+        <p><code>GROUP BY</code> groups rows sharing a value. <code>HAVING</code> filters those groups.</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">SQL</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>SELECT department, COUNT(*) AS total
+FROM employees
+GROUP BY department
+HAVING COUNT(*) > 5;</code></pre>
+        </div>
+      </section>
+
+      <section id="subquery">
+        <h2>Subqueries</h2>
+        <p>A subquery is a query nested inside another query.</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">SQL</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>SELECT name FROM employees
+WHERE salary > (SELECT AVG(salary) FROM employees);</code></pre>
+        </div>
+      </section>
+
+      <section id="ddl">
+        <h2>DDL Commands</h2>
+        <p>Data Definition Language commands define the database structure.</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">SQL</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>-- Create a table
+CREATE TABLE students (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    age INT
+);
+
+-- Alter a table
+ALTER TABLE students ADD email VARCHAR(100);
+
+-- Drop a table
+DROP TABLE students;</code></pre>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Code &amp;&amp; Syntax. All rights reserved.</p>
+    <p>Contact us: <a href="mailto:info@syntaxcode.com">info@syntaxcode.com</a></p>
+    <a href="#header" class="back-to-top">⬆ Back to Top</a>
+  </footer>
+
+  <!-- Fullscreen Overlay -->
+  <div class="fullscreen-overlay" id="fullscreen-overlay" role="dialog" aria-modal="true" aria-label="Fullscreen code view">
+    <div class="fullscreen-inner">
+      <div class="fullscreen-header">
+        <span id="fullscreen-label">Code</span>
+        <button class="fullscreen-close" id="fullscreen-close" aria-label="Close fullscreen">✕</button>
+      </div>
+      <pre><code id="fullscreen-code"></code></pre>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -1,131 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code && Syntax | Python</title>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-    
-    <!-- External CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code &amp;&amp; Syntax | Python</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header" id="header">
-        <div id="master-title">
-            <h1>Code && Syntax</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="java-page.html">Java</a></li>
-                <li><a href="python-page.html" class="active">Python</a></li>
-                <li><a href="spl-page.html">SQL</a></li>
-                <li><a href="dsa-page.html">Data Structures & Algorithms</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
 
-        <!-- Mobile Menu Button -->
-        <button class="menu-toggle" aria-label="Toggle sidebar" aria-expanded="false">☰</button>
-    </header>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div id="master-title"><h1>Code &amp;&amp; Syntax</h1></div>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="java-page.html">Java</a></li>
+        <li><a href="python-page.html" class="active">Python</a></li>
+        <li><a href="spl-page.html">SQL</a></li>
+        <li><a href="dsa-page.html">DSA</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" aria-label="Toggle sidebar" aria-expanded="false">☰</button>
+  </header>
 
-    <!-- Main Layout -->
-    <div class="content-container">
-        <!-- Sidebar -->
-        <aside class="sidebar" aria-label="Python topics navigation">
-            <h2>Python Topics</h2>
-            <ul>
-                <li><a href="#intro">Introduction</a></li>
-                <li><a href="#syntax">Basic Syntax</a></li>
-                <li><a href="#datatypes">Data Types</a></li>
-                <li><a href="#loops">Loops & Control Flow</a></li>
-                <li><a href="#functions">Functions</a></li>
-                <li><a href="#oops">Object-Oriented Programming</a></li>
-                <li><a href="#modules">Modules & Packages</a></li>
-                <li><a href="#exceptions">Exception Handling</a></li>
-                <li><a href="#file">File Handling</a></li>
-            </ul>
-        </aside>
+  <div class="content-container">
 
-        <!-- Main Content -->
-        <main class="main-content">
-            <!-- Introduction -->
-            <section id="intro">
-                <h2>Introduction to Python</h2>
-                <p>Python is a high-level, interpreted, and dynamically typed programming language known for its simplicity and versatility. It supports multiple programming paradigms, including procedural, object-oriented, and functional programming.</p>
-            </section>
+    <!-- Sidebar -->
+    <aside class="sidebar" aria-label="Python topics">
+      <h2>Python Topics</h2>
+      <ul>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#syntax">Basic Syntax</a></li>
+        <li><a href="#datatypes">Data Types</a></li>
+        <li><a href="#loops">Loops &amp; Control Flow</a></li>
+        <li><a href="#functions">Functions</a></li>
+        <li><a href="#oops">OOP</a></li>
+        <li><a href="#modules">Modules &amp; Packages</a></li>
+        <li><a href="#exceptions">Exception Handling</a></li>
+        <li><a href="#file">File Handling</a></li>
+      </ul>
+    </aside>
 
-            <!-- Basic Syntax -->
-            <section id="syntax">
-                <h2>Basic Syntax</h2>
-                <p>Python code is executed line by line (interpreted). Unlike Java or C++, indentation determines code blocks instead of curly braces.</p>
+    <!-- Main Content -->
+    <main class="main-content">
 
-<pre class="code-box"><code class="language-python">
-# Simple Python Program
-print("Hello, World!")
+      <!-- Introduction -->
+      <section id="intro">
+        <h2>Introduction to Python</h2>
+        <p>Python is a high-level, interpreted, and dynamically typed programming language known for its simplicity and versatility. It supports multiple programming paradigms, including procedural, object-oriented, and functional programming.</p>
+      </section>
 
-# Indentation is important
+      <!-- Basic Syntax -->
+      <section id="syntax">
+        <h2>Basic Syntax</h2>
+        <p>Python code is executed line by line. Unlike Java or C++, <strong>indentation</strong> determines code blocks instead of curly braces.</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Python</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>print("Hello, World!")
+
 if True:
-    print("This is indented properly!")
-</code></pre>
-            </section>
+    print("This is indented properly!")</code></pre>
+        </div>
+      </section>
 
-            <!-- Data Types -->
-            <section id="datatypes">
-                <h2>Data Types</h2>
-                <p>Python supports several built-in data types such as <code>int</code>, <code>float</code>, <code>str</code>, <code>list</code>, <code>tuple</code>, <code>dict</code>, and <code>set</code>.</p>
+      <!-- Data Types -->
+      <section id="datatypes">
+        <h2>Data Types</h2>
+        <p>Python supports several built-in data types: <code>int</code>, <code>float</code>, <code>str</code>, <code>list</code>, <code>tuple</code>, <code>dict</code>, and <code>set</code>.</p>
 
-<pre class="code-box"><code class="language-python">
-# Examples of data types
-name = "Alice"      # str
-age = 25            # int
-pi = 3.14           # float
-numbers = [1, 2, 3] # list
-person = {"name": "Alice", "age": 25} # dict
-</code></pre>
-            </section>
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Python</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>name = "Alice"       # str
+age = 25             # int
+pi = 3.14            # float
+numbers = [1, 2, 3]  # list
+person = {"name": "Alice", "age": 25}  # dict</code></pre>
+        </div>
+      </section>
 
-            <!-- Loops -->
-            <section id="loops">
-                <h2>Loops & Control Flow</h2>
-                <p>Python provides <code>for</code> and <code>while</code> loops to iterate over sequences.</p>
+      <!-- Loops -->
+      <section id="loops">
+        <h2>Loops &amp; Control Flow</h2>
+        <p>Python provides <code>for</code> and <code>while</code> loops to iterate over sequences.</p>
 
-<pre class="code-box"><code class="language-python">
-# For loop example
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Python</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code># For loop
 for i in range(5):
     print("Iteration:", i)
 
-# While loop example
+# While loop
 count = 0
 while count < 3:
     print("Count:", count)
-    count += 1
-</code></pre>
-            </section>
+    count += 1</code></pre>
+        </div>
+      </section>
 
-            <!-- Functions -->
-            <section id="functions">
-                <h2>Functions</h2>
-                <p>Functions in Python are defined using the <code>def</code> keyword. They help in reusability and modular coding.</p>
+      <!-- Functions -->
+      <section id="functions">
+        <h2>Functions</h2>
+        <p>Functions in Python are defined using the <code>def</code> keyword. They enable reusability and modular coding.</p>
 
-<pre class="code-box"><code class="language-python">
-def greet(name):
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Python</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>def greet(name):
     return f"Hello, {name}!"
 
-print(greet("Alice"))
-</code></pre>
-            </section>
+print(greet("Alice"))</code></pre>
+        </div>
 
-            <!-- OOP -->
-            <section id="oops">
-                <h2>Object-Oriented Programming</h2>
-                <p>Python supports classes and objects for OOP. You can create classes using the <code>class</code> keyword.</p>
+        <h4>Output</h4>
+        <div class="output-block"><pre><code>Hello, Alice!</code></pre></div>
+      </section>
 
-<pre class="code-box"><code class="language-python">
-class Person:
+      <!-- OOP -->
+      <section id="oops">
+        <h2>Object-Oriented Programming</h2>
+        <p>Python supports classes and objects. You can create classes using the <code>class</code> keyword.</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Python</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>class Person:
     def __init__(self, name, age):
         self.name = name
         self.age = age
@@ -134,30 +163,46 @@ class Person:
         print(f"Hello, I'm {self.name} and I'm {self.age} years old.")
 
 p1 = Person("Bob", 30)
-p1.greet()
-</code></pre>
-            </section>
+p1.greet()</code></pre>
+        </div>
 
-            <!-- Modules -->
-            <section id="modules">
-                <h2>Modules & Packages</h2>
-                <p>Modules in Python are files containing code. You can import them using the <code>import</code> statement.</p>
+        <h4>Output</h4>
+        <div class="output-block"><pre><code>Hello, I'm Bob and I'm 30 years old.</code></pre></div>
+      </section>
 
-<pre class="code-box"><code class="language-python">
-# math module example
-import math
+      <!-- Modules -->
+      <section id="modules">
+        <h2>Modules &amp; Packages</h2>
+        <p>Modules are files containing Python code. You import them using the <code>import</code> statement.</p>
 
-print(math.sqrt(16))
-</code></pre>
-            </section>
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Python</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>import math
 
-            <!-- Exception Handling -->
-            <section id="exceptions">
-                <h2>Exception Handling</h2>
-                <p>Python handles runtime errors using <code>try</code>, <code>except</code>, and <code>finally</code> blocks.</p>
+print(math.sqrt(16))  # Output: 4.0</code></pre>
+        </div>
+      </section>
 
-<pre class="code-box"><code class="language-python">
-try:
+      <!-- Exception Handling -->
+      <section id="exceptions">
+        <h2>Exception Handling</h2>
+        <p>Python handles runtime errors using <code>try</code>, <code>except</code>, and <code>finally</code> blocks.</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Python</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>try:
     num = int(input("Enter a number: "))
     print(10 / num)
 except ZeroDivisionError:
@@ -165,57 +210,54 @@ except ZeroDivisionError:
 except ValueError:
     print("Invalid input.")
 finally:
-    print("Execution complete.")
-</code></pre>
-            </section>
+    print("Execution complete.")</code></pre>
+        </div>
+      </section>
 
-            <!-- File Handling -->
-            <section id="file">
-                <h2>File Handling</h2>
-                <p>Python provides simple functions for file operations like reading and writing.</p>
+      <!-- File Handling -->
+      <section id="file">
+        <h2>File Handling</h2>
+        <p>Python provides simple built-in functions for file operations.</p>
 
-<pre class="code-box"><code class="language-python">
-# Writing to a file
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Python</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code># Writing to a file
 with open("example.txt", "w") as file:
     file.write("Hello, Python!")
 
 # Reading from a file
 with open("example.txt", "r") as file:
-    print(file.read())
-</code></pre>
-            </section>
-        </main>
+    print(file.read())</code></pre>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Code &amp;&amp; Syntax. All rights reserved.</p>
+    <p>Contact us: <a href="mailto:info@syntaxcode.com">info@syntaxcode.com</a></p>
+    <a href="#header" class="back-to-top">⬆ Back to Top</a>
+  </footer>
+
+  <!-- Fullscreen Overlay -->
+  <div class="fullscreen-overlay" id="fullscreen-overlay" role="dialog" aria-modal="true" aria-label="Fullscreen code view">
+    <div class="fullscreen-inner">
+      <div class="fullscreen-header">
+        <span id="fullscreen-label">Code</span>
+        <button class="fullscreen-close" id="fullscreen-close" aria-label="Close fullscreen">✕</button>
+      </div>
+      <pre><code id="fullscreen-code"></code></pre>
     </div>
+  </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Code && Syntax. All rights reserved.</p>
-        <p>Contact us: <a href="mailto:info@syntaxcode.com">info@syntaxcode.com</a></p>
-        <a href="#header" class="back-to-top">⬆ Back to Top</a>
-    </footer>
-
-    <!-- Sidebar Toggle Script -->
-    <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const sidebar = document.querySelector('.sidebar');
-        const body = document.body;
-        const links = document.querySelectorAll('.sidebar a');
-
-        menuToggle.addEventListener('click', () => {
-            sidebar.classList.toggle('open');
-            body.classList.toggle('sidebar-open');
-            const isOpen = sidebar.classList.contains('open');
-            menuToggle.setAttribute('aria-expanded', isOpen);
-        });
-
-        // Close sidebar automatically when a link is clicked (on mobile)
-        links.forEach(link => {
-            link.addEventListener('click', () => {
-                sidebar.classList.remove('open');
-                body.classList.remove('sidebar-open');
-                menuToggle.setAttribute('aria-expanded', 'false');
-            });
-        });
-    </script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

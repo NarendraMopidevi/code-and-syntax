@@ -1,38 +1,266 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
-    <meata charset = "UTF-8">
-    <meta name ="viewport" content="width=device-width, initial-scale">
-    <title>dsa-page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-    <link rel = "stylesheet" href = "assets\css\style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code &amp;&amp; Syntax | DSA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div id="master-title">
-            <h1>Code && Syntax</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="java-page.html">Java</a></li>
-                <li><a href="python-page.html">Python</a></li>
-                <li><a href="spl-page.html">SQL</a></li>
-                <li><a href="dsa-page.html">Data Structures & Algorithms</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main> 
-    </main>
-    <aside>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div id="master-title"><h1>Code &amp;&amp; Syntax</h1></div>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="java-page.html">Java</a></li>
+        <li><a href="python-page.html">Python</a></li>
+        <li><a href="spl-page.html">SQL</a></li>
+        <li><a href="dsa-page.html" class="active">DSA</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" aria-label="Toggle sidebar" aria-expanded="false">☰</button>
+  </header>
+
+  <div class="content-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" aria-label="DSA topics">
+      <h2>DSA Topics</h2>
+      <ul>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#arrays">Arrays</a></li>
+        <li><a href="#linked-list">Linked Lists</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#queue">Queue</a></li>
+        <li><a href="#trees">Trees</a></li>
+        <li><a href="#graphs">Graphs</a></li>
+        <li><a href="#sorting">Sorting Algorithms</a></li>
+        <li><a href="#searching">Searching Algorithms</a></li>
+      </ul>
     </aside>
-    <footer>
-        <p>&copy; 2025 Code && Syntax. All rights reserved.</p>
-        <p>Contact us: <a href="mailto:info@syntaxcode.com">info@syntaxcode.com</a></p>
-        <a href="#header" class="back-to-top">⬆ Back to Top</a>
-    </footer>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <section id="intro">
+        <h2>Introduction to DSA</h2>
+        <p><strong>Data Structures and Algorithms (DSA)</strong> form the backbone of computer science. A data structure is a way of organizing data for efficient access and modification, while an algorithm is a step-by-step process to solve a problem.</p>
+        <p>Mastering DSA is essential for writing efficient code and is a key focus area in technical interviews.</p>
+      </section>
+
+      <section id="arrays">
+        <h2>Arrays</h2>
+        <p>An array is a collection of elements stored at contiguous memory locations. It's the simplest and most widely used data structure.</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Java</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>int[] arr = {10, 20, 30, 40, 50};
+
+// Access element
+System.out.println(arr[2]); // 30
+
+// Traverse array
+for (int i = 0; i < arr.length; i++) {
+    System.out.println(arr[i]);
+}</code></pre>
+        </div>
+      </section>
+
+      <section id="linked-list">
+        <h2>Linked Lists</h2>
+        <p>A linked list is a linear data structure where each element (node) contains data and a reference to the next node.</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Java</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>class Node {
+    int data;
+    Node next;
+
+    Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+class LinkedList {
+    Node head;
+
+    void add(int data) {
+        Node newNode = new Node(data);
+        if (head == null) { head = newNode; return; }
+        Node current = head;
+        while (current.next != null) current = current.next;
+        current.next = newNode;
+    }
+}</code></pre>
+        </div>
+      </section>
+
+      <section id="stack">
+        <h2>Stack</h2>
+        <p>A stack is a <strong>LIFO</strong> (Last In, First Out) data structure. The last element added is the first to be removed.</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Java</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>import java.util.Stack;
+
+Stack&lt;Integer&gt; stack = new Stack&lt;&gt;();
+stack.push(10);
+stack.push(20);
+stack.push(30);
+
+System.out.println(stack.pop());  // 30
+System.out.println(stack.peek()); // 20</code></pre>
+        </div>
+      </section>
+
+      <section id="queue">
+        <h2>Queue</h2>
+        <p>A queue is a <strong>FIFO</strong> (First In, First Out) data structure. The first element added is the first to be removed.</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Java</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>import java.util.LinkedList;
+import java.util.Queue;
+
+Queue&lt;Integer&gt; queue = new LinkedList&lt;&gt;();
+queue.offer(10);
+queue.offer(20);
+queue.offer(30);
+
+System.out.println(queue.poll()); // 10
+System.out.println(queue.peek()); // 20</code></pre>
+        </div>
+      </section>
+
+      <section id="trees">
+        <h2>Trees</h2>
+        <p>A tree is a hierarchical data structure with a root node and subtrees of children. A <strong>Binary Search Tree (BST)</strong> is a common type where left children are smaller and right children are larger than the parent.</p>
+        <p><em>More content coming soon.</em></p>
+      </section>
+
+      <section id="graphs">
+        <h2>Graphs</h2>
+        <p>A graph is a collection of nodes (vertices) connected by edges. Graphs can be directed or undirected, and are used to model networks, maps, and relationships.</p>
+        <p><em>More content coming soon.</em></p>
+      </section>
+
+      <section id="sorting">
+        <h2>Sorting Algorithms</h2>
+        <p>Sorting algorithms arrange elements in a specific order (ascending or descending).</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Algorithm</th><th>Best</th><th>Average</th><th>Worst</th><th>Stable</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Bubble Sort</td><td>O(n)</td><td>O(n²)</td><td>O(n²)</td><td>Yes</td></tr>
+              <tr><td>Selection Sort</td><td>O(n²)</td><td>O(n²)</td><td>O(n²)</td><td>No</td></tr>
+              <tr><td>Insertion Sort</td><td>O(n)</td><td>O(n²)</td><td>O(n²)</td><td>Yes</td></tr>
+              <tr><td>Merge Sort</td><td>O(n log n)</td><td>O(n log n)</td><td>O(n log n)</td><td>Yes</td></tr>
+              <tr><td>Quick Sort</td><td>O(n log n)</td><td>O(n log n)</td><td>O(n²)</td><td>No</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Java — Bubble Sort</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>void bubbleSort(int[] arr) {
+    int n = arr.length;
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}</code></pre>
+        </div>
+      </section>
+
+      <section id="searching">
+        <h2>Searching Algorithms</h2>
+        <p>Searching algorithms locate a specific element within a data structure.</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Java — Binary Search</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>int binarySearch(int[] arr, int target) {
+    int left = 0, right = arr.length - 1;
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+        if (arr[mid] == target) return mid;
+        else if (arr[mid] < target) left = mid + 1;
+        else right = mid - 1;
+    }
+    return -1;
+}</code></pre>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Code &amp;&amp; Syntax. All rights reserved.</p>
+    <p>Contact us: <a href="mailto:info@syntaxcode.com">info@syntaxcode.com</a></p>
+    <a href="#header" class="back-to-top">⬆ Back to Top</a>
+  </footer>
+
+  <!-- Fullscreen Overlay -->
+  <div class="fullscreen-overlay" id="fullscreen-overlay" role="dialog" aria-modal="true" aria-label="Fullscreen code view">
+    <div class="fullscreen-inner">
+      <div class="fullscreen-header">
+        <span id="fullscreen-label">Code</span>
+        <button class="fullscreen-close" id="fullscreen-close" aria-label="Close fullscreen">✕</button>
+      </div>
+      <pre><code id="fullscreen-code"></code></pre>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
