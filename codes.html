@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code &amp;&amp; Syntax | Java</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <!-- Header -->
+  <header class="header" id="header">
+    <div id="master-title">
+      <h1>Code &amp;&amp; Syntax</h1>
+    </div>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="java-page.html">Java</a></li>
+        <li><a href="python-page.html">Python</a></li>
+        <li><a href="spl-page.html">SQL</a></li>
+        <li><a href="dsa-page.html">DSA</a></li>
+        <li><a href="codes.html" class="active">CODES</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" aria-label="Toggle sidebar" aria-expanded="false">☰</button>
+  </header>
+
+  <div class="content-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Languages</h2>
+
+      <ul>
+
+        <!-- Java -->
+        <li><strong>Java</strong>
+          <ul>
+            <li><a href="#java-intro">Introduction</a></li>
+            <li><a href="#java-syntax">Syntax</a></li>
+            <li><a href="#java-datatypes">Data Types</a></li>
+            <li><a href="#java-control">Control Statements</a></li>
+          </ul>
+        </li>
+
+        <!-- Python -->
+        <li><strong>Python</strong>
+          <ul>
+            <li><a href="#python-intro">Introduction</a></li>
+            <li><a href="#python-syntax">Syntax</a></li>
+            <li><a href="#python-datatypes">Data Types</a></li>
+            <li><a href="#python-control">Control Statements</a></li>
+          </ul>
+        </li>
+
+        <!-- SQL -->
+        <li><strong>SQL</strong>
+          <ul>
+            <li><a href="#sql-intro">Introduction</a></li>
+            <li><a href="#sql-commands">Commands</a></li>
+            <li><a href="#sql-queries">Queries</a></li>
+          </ul>
+        </li>
+
+        <!-- DSA -->
+        <li><strong>DSA</strong>
+          <ul>
+            <li><a href="#dsa-intro">Introduction</a></li>
+            <li><a href="#dsa-arrays">Arrays</a></li>
+            <li><a href="#dsa-linkedlist">Linked List</a></li>
+            <li><a href="#dsa-twopointer">Two Pointer</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!-- JAVA -->
+      <section id="java-intro">
+        <h2>Java - Introduction</h2>
+        <p>Java is an object-oriented, platform-independent programming language.</p>
+      </section>
+
+      <section id="java-syntax">
+        <h2>Java - Syntax</h2>
+
+        <div class="code-wrap">
+          <pre><code>class Hello {
+  public static void main(String[] args) {
+    System.out.println("Hello Java");
+  }
+}</code></pre>
+        </div>
+      </section>
+
+      <section id="java-datatypes">
+        <h2>Java - Data Types</h2>
+        <p>Primitive and Non-Primitive data types.</p>
+      </section>
+
+      <section id="java-control">
+        <h2>Java - Control Statements</h2>
+        <p>if, switch, loops.</p>
+      </section>
+
+
+      <!-- PYTHON -->
+      <section id="python-intro">
+        <h2>Python - Introduction</h2>
+        <p>Python is a high-level, interpreted language.</p>
+      </section>
+
+      <section id="python-syntax">
+        <h2>Python - Syntax</h2>
+
+        <div class="code-wrap">
+          <pre><code>print("Hello Python")</code></pre>
+        </div>
+      </section>
+
+      <section id="python-datatypes">
+        <h2>Python - Data Types</h2>
+        <p>int, float, list, tuple, dict.</p>
+      </section>
+
+      <section id="python-control">
+        <h2>Python - Control Statements</h2>
+        <p>if, for, while.</p>
+      </section>
+
+
+      <!-- SQL -->
+      <section id="sql-intro">
+        <h2>SQL - Introduction</h2>
+        <p>SQL is used to manage databases.</p>
+      </section>
+
+      <section id="sql-commands">
+        <h2>SQL Commands</h2>
+
+        <div class="code-wrap">
+          <pre><code>SELECT * FROM students;</code></pre>
+        </div>
+      </section>
+
+      <section id="sql-queries">
+        <h2>SQL Queries</h2>
+        <p>Filtering, joining tables.</p>
+      </section>
+
+
+      <!-- DSA -->
+      <section id="dsa-intro">
+        <h2>DSA - Introduction</h2>
+        <p>Data Structures and Algorithms improve problem solving.</p>
+      </section>
+
+      <section id="dsa-arrays">
+        <h2>Arrays</h2>
+        <p>Collection of elements stored in contiguous memory.</p>
+      </section>
+
+      <section id="dsa-linkedlist">
+        <h2>Linked List</h2>
+        <p>Nodes connected via pointers.</p>
+      </section>
+
+      <section id="dsa-twopointer">
+        <h2>Two Pointer Algorithm</h2>
+
+        <div class="code-wrap">
+          <pre><code>int left = 0, right = arr.length - 1;
+
+while(left < right){
+    if(arr[left] + arr[right] == target){
+        System.out.println("Found");
+    }
+}</code></pre>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+  
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Code &amp;&amp; Syntax. All rights reserved.</p>
+    <p>Contact us: <a href="mailto:info@syntaxcode.com">info@syntaxcode.com</a></p>
+    <a href="#header" class="back-to-top">⬆ Back to Top</a>
+  </footer>
+
+  <!-- Fullscreen Overlay -->
+  <div class="fullscreen-overlay" id="fullscreen-overlay" role="dialog" aria-modal="true"
+    aria-label="Fullscreen code view">
+    <div class="fullscreen-inner">
+      <div class="fullscreen-header">
+        <span id="fullscreen-label">Code</span>
+        <button class="fullscreen-close" id="fullscreen-close" aria-label="Close fullscreen">✕</button>
+      </div>
+      <pre><code id="fullscreen-code"></code></pre>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

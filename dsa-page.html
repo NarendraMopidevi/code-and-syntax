@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Code &amp;&amp; Syntax | DSA</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
   <!-- Header -->
   <header class="header" id="header">
-    <div id="master-title"><h1>Code &amp;&amp; Syntax</h1></div>
+    <div id="master-title">
+      <h1>Code &amp;&amp; Syntax</h1>
+    </div>
     <nav aria-label="Main navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -19,6 +24,7 @@
         <li><a href="python-page.html">Python</a></li>
         <li><a href="spl-page.html">SQL</a></li>
         <li><a href="dsa-page.html" class="active">DSA</a></li>
+        <li><a href="codes.html">CODES</a></li>
         <li><a href="about.html">About</a></li>
       </ul>
     </nav>
@@ -40,6 +46,7 @@
         <li><a href="#graphs">Graphs</a></li>
         <li><a href="#sorting">Sorting Algorithms</a></li>
         <li><a href="#searching">Searching Algorithms</a></li>
+        <li><a href="#design-patterns">Design Patterns</a></li>
       </ul>
     </aside>
 
@@ -48,97 +55,810 @@
 
       <section id="intro">
         <h2>Introduction to DSA</h2>
-        <p><strong>Data Structures and Algorithms (DSA)</strong> form the backbone of computer science. A data structure is a way of organizing data for efficient access and modification, while an algorithm is a step-by-step process to solve a problem.</p>
-        <p>Mastering DSA is essential for writing efficient code and is a key focus area in technical interviews.</p>
+
+        <p><strong>What is DSA?</strong><br>
+          DSA stands for <strong>Data Structures and Algorithms</strong>. It is one of the core pillars of computer
+          science and programming. DSA helps you answer two big questions:</p>
+
+        <ol>
+          <li><strong>How should I store and organize data?</strong> → <strong>Data Structures</strong></li>
+          <li><strong>How should I process that data step‑by‑step?</strong> → <strong>Algorithms</strong></li>
+        </ol>
+
+
+        <h3>Data Structures: How Data is Organized</h3>
+        <p>A <strong>data structure</strong> is a way of storing, organizing, and managing data so that it can be
+          accessed and modified efficiently. Different structures are optimized for different operations:</p>
+
+        <ul>
+          <li><strong>Arrays</strong>: A simple list of elements stored in contiguous memory. Fast to access by index,
+            but fixed or harder to resize.</li>
+          <li><strong>Linked Lists</strong>: A sequence of nodes, each containing data and a pointer to the next node.
+            Easy to insert/delete in the middle, but slower to access by index.</li>
+          <li><strong>Stacks and Queues</strong>:
+            <ul>
+              <li><strong>Stack</strong> follows LIFO (Last In, First Out), used in function calls, undo‑redo, and
+                recursion.</li>
+              <li><strong>Queue</strong> follows FIFO (First In, First Out), used in scheduling, breadth‑first search,
+                and task management.</li>
+            </ul>
+          </li>
+          <li><strong>Trees and Graphs</strong>:
+            <ul>
+              <li><strong>Trees</strong> are hierarchical structures (like a family tree or file system). Binary Search
+                Trees allow fast searching and sorting.</li>
+              <li><strong>Graphs</strong> model networks and relationships (social networks, maps, circuit diagrams).
+              </li>
+            </ul>
+          </li>
+          <li><strong>Hash Tables / Maps</strong>: Store key‑value pairs and allow very fast lookup, insertion, and
+            deletion on average.</li>
+        </ul>
+
+        <p>Choosing the right data structure often decides whether your program runs in milliseconds or seconds.</p>
+
+
+        <h3>Algorithms: Step‑by‑Step Problem Solving</h3>
+        <p>An <strong>algorithm</strong> is a clear, finite set of instructions that solves a specific problem or
+          performs a task. For example:</p>
+
+        <ul>
+          <li><strong>Sorting algorithms</strong> arrange elements in order (ascending or descending).</li>
+          <li><strong>Searching algorithms</strong> find a particular element in a data set.</li>
+        </ul>
+
+        <p>Algorithms are usually described in a language‑independent way, but then implemented in a real programming
+          language like Java or Python.</p>
+
+        <p>Common algorithmic ideas include:</p>
+        <ul>
+          <li><strong>Iteration</strong> (loops)</li>
+          <li><strong>Recursion</strong> (functions calling themselves)</li>
+          <li><strong>Divide‑and‑conquer</strong> (split a problem into smaller sub‑problems)</li>
+          <li><strong>Greedy methods</strong> (always choose the best immediate option)</li>
+          <li><strong>Dynamic programming</strong> (break problems into overlapping sub‑problems and reuse results)</li>
+        </ul>
+
+
+        <h3>Why Time and Space Complexity Matter</h3>
+        <p>To compare different algorithms, we use <strong>time complexity</strong> and <strong>space
+            complexity</strong>, usually expressed using <strong>Big‑O notation</strong>.</p>
+
+        <ul>
+          <li><strong>Time complexity</strong> tells how the running time grows as the input size increases.</li>
+          <li><strong>Space complexity</strong> tells how much extra memory the algorithm uses.</li>
+        </ul>
+
+        <p>Examples:</p>
+        <ul>
+          <li><code>O(n)</code>: Linear time; time grows linearly with input size.</li>
+          <li><code>O(n²)</code>: Quadratic time; common in simple nested loops.</li>
+          <li><code>O(log n)</code>: Logarithmic time; very fast; common in binary search.</li>
+          <li><code>O(1)</code>: Constant time; does not depend on input size.</li>
+        </ul>
+
+        <p>A good DSA mindset is:<br>
+          “Which structure and algorithm together give the best time and space trade‑off for this problem?”</p>
+
+
+        <h3>What DSA Is Used For</h3>
+        <p>DSA is not just theory; it powers real‑world software:</p>
+
+        <ul>
+          <li>Search and sorting in databases, search engines, and e‑commerce.</li>
+          <li>Caching and networking using queues, stacks, and hash tables.</li>
+          <li>Graph algorithms in GPS navigation, social networks, and recommendation systems.</li>
+          <li>Machine learning and AI for efficient data structures under the hood.</li>
+        </ul>
       </section>
 
       <section id="arrays">
         <h2>Arrays</h2>
-        <p>An array is a collection of elements stored at contiguous memory locations. It's the simplest and most widely used data structure.</p>
+
+        <p>An <strong>array</strong> is a fixed‑size collection of elements stored in contiguous memory. Each element is
+          accessed using an index, starting from <code>0</code>. Arrays are one of the simplest and most widely used
+          data structures.</p>
+
+
+        <h3>Declaring and Initializing Arrays</h3>
+
+        <p>You can create and initialize arrays in several simple ways:</p>
 
         <div class="code-wrap">
           <div class="code-header">
-            <span class="code-lang">Java</span>
+            <span class="code-lang">Array Declaration & Initialization</span>
             <div style="display:flex;gap:6px">
               <button class="expand-btn" title="View fullscreen">⛶</button>
               <button class="copy-btn">Copy</button>
             </div>
           </div>
-          <pre><code>int[] arr = {10, 20, 30, 40, 50};
+          <pre><code>// 1. Declare then allocate
+int[] arr1;
+arr1 = new int[5]; // 5 elements, all 0 by default
 
-// Access element
-System.out.println(arr[2]); // 30
+// 2. Declare and allocate in one line
+int[] arr2 = new int[4];
 
-// Traverse array
-for (int i = 0; i < arr.length; i++) {
-    System.out.println(arr[i]);
+// 3. Initialize with values
+int[] arr3 = {10, 20, 30, 40, 50};
+
+// 4. Two-dimensional array (matrix)
+int[][] matrix = {{1, 2}, {3, 4}};
+
+// 5. Access by index
+System.out.println(arr3[0]); // 10
+System.out.println(arr3[2]); // 30</code></pre>
+        </div>
+
+
+        <h3>Common Uses of Arrays</h3>
+
+        <p>Arrays are frequently used in basic algorithms and interview problems:</p>
+        <ul>
+          <li>Storing lists of numbers, strings, or objects.</li>
+          <li>Implementing sorting and searching algorithms.</li>
+          <li>Building 2D grids or matrices (like graphs or game boards).</li>
+          <li>Dynamic programming tables (1D or 2D).</li>
+        </ul>
+
+
+        <h3>Key Limitations (Interview Mindset)</h3>
+
+        <ul>
+          <li>Size is fixed once created; you cannot change it directly without copying.</li>
+          <li>Access by index is <code>O(1)</code>, but inserting/deleting in the middle takes <code>O(n)</code>.</li>
+          <li>Reading or writing outside the valid index range causes an out‑of‑bounds error.</li>
+          <li>For problems that need frequent insertions or dynamic sizing, a different structure (like a list) is
+            usually better.</li>
+        </ul>
+      </section>
+
+
+
+      <section id="arrays-practice">
+        <h2>Arrays: Practice Problem</h2>
+        <p>Here is a simple DSA‑style array problem you can solve to strengthen your understanding of indexing and
+          loops.</p>
+
+        <h3>Problem: Find Maximum Element in an Array</h3>
+        <p>Given an array of integers, write a function to find and return the largest element.</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Find Maximum Element</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>int findMax(int[] arr) {
+    if (arr.length == 0) return -1; // or throw an exception
+
+    int max = arr[0];
+    for (int i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
 }</code></pre>
         </div>
+
+        <h3>Explanation (Interview Mindset)</h3>
+        <p>We start by assuming the first element is the maximum. Then we iterate through the rest of the array,
+          updating <code>max</code> whenever we encounter a larger element. This approach runs in <code>O(n)</code> time
+          and uses constant extra space, which is optimal for this problem.</p>
       </section>
+
 
       <section id="linked-list">
         <h2>Linked Lists</h2>
-        <p>A linked list is a linear data structure where each element (node) contains data and a reference to the next node.</p>
+        <p>A <strong>linked list</strong> is a linear data structure where each element (called a <strong>node</strong>)
+          contains data and a reference to the next node. Unlike arrays, nodes are not stored in contiguous memory; they
+          are linked by pointers.</p>
+
+
+        <h3>Why Use Linked Lists Instead of Arrays?</h3>
+        <p>Linked lists are preferred over arrays when:</p>
+        <ul>
+          <li>You need <strong>frequent insertions or deletions</strong> in the middle of the list.</li>
+          <li>The <strong>size is unknown or changes often</strong>; you don’t want to copy everything when resizing.
+          </li>
+          <li>You want <strong>flexible memory usage</strong>, allocating only what you need.</li>
+        </ul>
+
+        <p>The trade‑off is that linked lists are slower to access by index because you must traverse the list from the
+          head.</p>
+
+
+        <h3>Linked List vs Array (Quick Comparison)</h3>
+        <p>In interviews, you should know when to prefer each structure:</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Aspect</th>
+                <th>Array</th>
+                <th>Linked List</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Memory layout</td>
+                <td>Contiguous blocks</td>
+                <td>Nodes scattered; linked by pointers</td>
+              </tr>
+              <tr>
+                <td>Size</td>
+                <td>Fixed size at creation</td>
+                <td>Dynamic; grows/shrinks as needed</td>
+              </tr>
+              <tr>
+                <td>Insert/delete middle</td>
+                <td><code>O(n)</code> (shift elements)</td>
+                <td><code>O(1)</code> if position is known</td>
+              </tr>
+              <tr>
+                <td>Access by index</td>
+                <td><code>O(1)</code> (fast)</td>
+                <td><code>O(n)</code> (must traverse)</td>
+              </tr>
+              <tr>
+                <td>Memory efficiency</td>
+                <td>May waste space if over‑allocated</td>
+                <td>Uses only needed memory</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Use <strong>arrays</strong> when you need fast random access and know the size. Use <strong>linked
+            lists</strong> when you need frequent insertions/deletions and dynamic size.</p>
+
+
+        <h3>Common Linked List Operations</h3>
+        <p>Basic operations on a singly linked list:</p>
+        <ul>
+          <li><strong>Traverse</strong>: Visit each node from head to tail (time: \(O(n)\)).</li>
+          <li><strong>Insert</strong>:
+            - At head: fast, \(O(1)\).
+            - At middle or tail: \(O(n)\) on average (traverse to position).</li>
+          <li><strong>Delete</strong>: Remove a node by updating pointers (time: \(O(n)\)).</li>
+          <li><strong>Search</strong>: Look for a value by scanning nodes (time: \(O(n)\)).</li>
+          <li><strong>Reverse</strong>: Flip the pointers so the list runs backwards (time: \(O(n)\); common interview
+            question).</li>
+        </ul>
+
+
+        <h3>Simple Linked List Node Code</h3>
+        <p>Here is a minimal node and list skeleton you can use as a base for linked‑list problems:</p>
 
         <div class="code-wrap">
           <div class="code-header">
-            <span class="code-lang">Java</span>
+            <span class="code-lang">Linked List Node</span>
             <div style="display:flex;gap:6px">
               <button class="expand-btn" title="View fullscreen">⛶</button>
               <button class="copy-btn">Copy</button>
             </div>
           </div>
-          <pre><code>class Node {
+          <pre><code>import java.util.Scanner;
+
+class Node {
     int data;
     Node next;
 
-    Node(int data) {
+    public Node(int data) {
         this.data = data;
         this.next = null;
     }
 }
 
-class LinkedList {
-    Node head;
 
-    void add(int data) {
+public class LinkedList {
+
+    private Node head;
+
+    // Insert at the beginning
+    private void insertAtBeginning(int data) {
         Node newNode = new Node(data);
-        if (head == null) { head = newNode; return; }
-        Node current = head;
-        while (current.next != null) current = current.next;
-        current.next = newNode;
+        newNode.next = head;
+        head = newNode;
+    }
+
+    // Insert at the ending (tail)
+    private void insertAtEnding(int data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = newNode;
+            return;
+        }
+
+        Node temp = head;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+        temp.next = newNode;
+    }
+
+    // Insert after a node with given value (insert after target)
+    private void insertByValue(int data, int target) {
+        if (head == null) {
+            System.out.println("List is empty");
+            return;
+        }
+
+        Node temp = head;
+        while (temp != null && temp.data != target) {
+            temp = temp.next;
+        }
+
+        if (temp == null) {
+            System.out.printf("%d is not found in the list%n", target);
+            return;
+        }
+
+        Node newNode = new Node(data);
+        newNode.next = temp.next;
+        temp.next = newNode;
+        System.out.printf("Inserted %d after %d%n", data, target);
+    }
+
+    // Insert at a given index (0‑based; valid indices: 0 to length)
+    private void insertAtPosition(int data, int position) {
+        if (position < 0) {
+            System.out.println("Invalid position");
+            return;
+        }
+
+        if (position == 0) {
+            insertAtBeginning(data);
+            return;
+        }
+
+        Node temp = head;
+        for (int i = 0; temp != null && i < position - 1; i++) {
+            temp = temp.next;
+        }
+
+        if (temp == null) {
+            System.out.println("Position out of range");
+            return;
+        }
+
+        Node newNode = new Node(data);
+        newNode.next = temp.next;
+        temp.next = newNode;
+        System.out.printf("Inserted %d at position %d%n", data, position);
+    }
+
+    // Delete at the beginning
+    private void deleteBeginning() {
+        if (head == null) {
+            System.out.println("List is empty");
+            return;
+        }
+        head = head.next;
+        System.out.println("First node deleted");
+    }
+
+    // Delete at the ending
+    private void deleteEnd() {
+        if (head == null) {
+            System.out.println("List is empty");
+            return;
+        }
+
+        if (head.next == null) {
+            head = null;
+            System.out.println("Last node deleted (now list is empty)");
+            return;
+        }
+
+        Node temp = head;
+        while (temp.next.next != null) {
+            temp = temp.next;
+        }
+        temp.next = null;
+        System.out.println("Last node deleted");
+    }
+
+    // Delete node at a given position (0‑based)
+    private void deleteAtPosition(int position) {
+        if (head == null || position < 0) {
+            System.out.println("Invalid position or empty list");
+            return;
+        }
+
+        if (position == 0) {
+            deleteBeginning();
+            return;
+        }
+
+        Node temp = head;
+        for (int i = 0; temp != null && i < position - 1; i++) {
+            temp = temp.next;
+        }
+
+        if (temp == null || temp.next == null) {
+            System.out.println("Position out of range");
+            return;
+        }
+
+        temp.next = temp.next.next;
+        System.out.printf("Node at position %d deleted%n", position);
+    }
+
+    // Delete node with given value (first occurrence)
+    private void deleteByValue(int target) {
+        if (head == null) {
+            System.out.println("List is empty");
+            return;
+        }
+
+        if (head.data == target) {
+            deleteBeginning();
+            return;
+        }
+
+        Node temp = head;
+        while (temp.next != null && temp.next.data != target) {
+            temp = temp.next;
+        }
+
+        if (temp.next == null) {
+            System.out.printf("%d is not found in the list%n", target);
+            return;
+        }
+
+        temp.next = temp.next.next;
+        System.out.printf("Node with value %d deleted%n", target);
+    }
+
+    // Reverse the linked list
+    private void reverse() {
+        if (head == null || head.next == null) {
+            return;
+        }
+
+        Node prev = null;
+        Node curr = head;
+
+        while (curr != null) {
+            Node next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+
+        head = prev;
+        System.out.println("List reversed");
+    }
+
+    // Display the list
+    private void display() {
+        if (head == null) {
+            System.out.println("List is empty!");
+            return;
+        }
+
+        System.out.print("List elements: ");
+        Node temp = head;
+        while (temp != null) {
+            System.out.printf("%d -> ", temp.data);
+            temp = temp.next;
+        }
+        System.out.println("Null");
+    }
+
+
+    public static void main(String[] args) {
+        LinkedList list = new LinkedList();
+        Scanner inp = new Scanner(System.in);
+        int choice, data;
+
+        do {
+            System.out.println("\nLinked List Operations");
+            System.out.println("\t1. Insert at Beginning");
+            System.out.println("\t2. Insert at Ending");
+            System.out.println("\t3. Insert by Position");
+            System.out.println("\t4. Insert by Value (after target)");
+            System.out.println("\t5. Delete Beginning");
+            System.out.println("\t6. Delete Ending");
+            System.out.println("\t7. Delete by Position");
+            System.out.println("\t8. Delete by Value");
+            System.out.println("\t9. Reverse List");
+            System.out.println("\t0. Print List");
+            System.out.println("\t10. Exit");
+            System.out.print("Enter your option: ");
+
+            choice = inp.nextInt();
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter element to insert at the beginning: ");
+                    data = inp.nextInt();
+                    list.insertAtBeginning(data);
+                    break;
+
+                case 2:
+                    System.out.print("Enter element to insert at the ending: ");
+                    data = inp.nextInt();
+                    list.insertAtEnding(data);
+                    break;
+
+                case 3:
+                    System.out.print("Enter element to insert: ");
+                    data = inp.nextInt();
+                    System.out.print("Enter position (0‑based): ");
+                    int pos = inp.nextInt();
+                    list.insertAtPosition(data, pos);
+                    break;
+
+                case 4:
+                    System.out.print("Enter target to insert after: ");
+                    int target = inp.nextInt();
+                    System.out.print("Enter element to insert after " + target + ": ");
+                    data = inp.nextInt();
+                    list.insertByValue(data, target);
+                    break;
+
+                case 5:
+                    list.deleteBeginning();
+                    break;
+
+                case 6:
+                    list.deleteEnd();
+                    break;
+
+                case 7:
+                    System.out.print("Enter position to delete (0‑based): ");
+                    pos = inp.nextInt();
+                    list.deleteAtPosition(pos);
+                    break;
+
+                case 8:
+                    System.out.print("Enter value to delete: ");
+                    data = inp.nextInt();
+                    list.deleteByValue(data);
+                    break;
+
+                case 9:
+                    list.reverse();
+                    break;
+
+                case 0:
+                    list.display();
+                    break;
+
+                case 10:
+                    System.out.println("Exiting...");
+                    break;
+
+                default:
+                    System.out.println("Invalid choice");
+            }
+
+        } while (choice != 10);
+
+        inp.close();
     }
 }</code></pre>
         </div>
+
+        <p>This basic structure is enough to implement insert, delete, search, and reverse logic for most DSA‑style
+          linked list problems.</p>
       </section>
 
       <section id="stack">
         <h2>Stack</h2>
-        <p>A stack is a <strong>LIFO</strong> (Last In, First Out) data structure. The last element added is the first to be removed.</p>
+        <p>A <strong>stack</strong> is a LIFO (Last‑In, First‑Out) data structure where elements can be added or removed
+          only from the top. Stacks are widely used in function calls, recursion, undo‑redo systems, and expression
+          evaluation.</p>
+
+        <h3>Why Use a Stack?</h3>
+        <p>Stacks are useful when:</p>
+        <ul>
+          <li>You need to process the most recently added element first.</li>
+          <li>You are tracking nested or recursive operations (function calls, brackets, HTML tags).</li>
+          <li>You are doing depth‑first search (DFS), backtracking, or expression parsing.</li>
+        </ul>
+
+        <h3>Stack Using a List / Array</h3>
+        <p>Here, the stack is implemented using a dynamic list (array‑like structure) that supports efficient push and
+          pop from the end.</p>
+        <p><em>Code coming soon.</em></p>
 
         <div class="code-wrap">
           <div class="code-header">
-            <span class="code-lang">Java</span>
+            <span class="code-lang">Stack using List / Array</span>
             <div style="display:flex;gap:6px">
               <button class="expand-btn" title="View fullscreen">⛶</button>
               <button class="copy-btn">Copy</button>
             </div>
           </div>
-          <pre><code>import java.util.Stack;
+          <pre><code>
+import java.util.Scanner;
 
-Stack&lt;Integer&gt; stack = new Stack&lt;&gt;();
-stack.push(10);
-stack.push(20);
-stack.push(30);
+class StackArray {
+    private final int[] stack;
+    private int top;
+    private final int stackSize;
 
-System.out.println(stack.pop());  // 30
-System.out.println(stack.peek()); // 20</code></pre>
+    public StackArray(int size) {
+        stack = new int[size];
+        stackSize =size;
+        top = -1;
+    }
+
+    public void push(int ele) {
+        if(top == stackSize - 1) {
+            System.out.println("stack us overflow");
+            return;
+        }
+        stack[++top] = ele;
+    }
+
+    public int pop() {
+        if(isEmpty()) {
+            System.out.print("Stack is underflow");
+            return -1;
+        }
+        System.out.printf("Poped element is %d\n", stack[top]);
+        return stack[top--];
+    }
+
+    public boolean isEmpty() {
+        return top == -1;
+    }
+
+    public void peek() {
+        if(isEmpty()) {
+            System.out.println("stack is underflow");
+            return;
+        }
+        System.out.printf("\nelement at the peek is %d", stack[top]);
+    }
+
+    public void printStack() {
+        if(isEmpty()) {
+            System.out.println("Stack is underflow");
+            return;
+        }
+        for(int i = top; i >= 0; i--) {
+            System.out.printf("\n[%d] -> %d", i, stack[i]);
+        }
+        System.out.println();
+    }
+    public static void main(String args[]) {
+        int choice;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter size of the Stack : ");
+        int size = sc.nextInt();
+        StackArray stack = new StackArray(size);
+        System.out.println("1. Push\n2. Pop\n3. Display\n4.Display peek");
+        while (true) { 
+            System.out.print("Enter your choice : ");
+            choice = sc.nextInt();
+            switch(choice) {
+                case 1 ->  {
+                    System.out.print("Enter element to push : ");
+                    int ele = sc.nextInt();
+                    stack.push(ele);
+                }
+                case 2 -> stack.pop();
+                
+                case 3 -> stack.printStack();
+
+                case 4 -> stack.peek();
+            }
+        }
+    }
+}</code></pre>
         </div>
+
+        <h3>Stack Using a Linked List</h3>
+        <p>Instead of an array, you can implement a stack using a linked list. The top of the stack is just the head of
+          the list.</p>
+        <p><em>Code coming soon.</em></p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Stack using Linked List</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          private class Node {
+
+          int data;
+          Node next;
+
+          public Node(int data) {
+          this.data = data;
+          this.next = null;
+          }
+          }
+
+          private Node top;
+
+          public StackLinkedList() {
+          this.top = null;
+          }
+
+          public boolean isEmpty() {
+          return top == null;
+          }
+
+          public void push(int data) {
+          Node newNode = new Node(data);
+          newNode.next = top;
+          top = newNode;
+          System.out.println("Pushed " + data+ "onto stack ");
+          }
+
+          public void display() {
+          if(isEmpty()) {
+          System.out.println("Stack is Empty");
+          return;
+          }
+
+          Node current = top;
+          while(current != null) {
+          System.out.print(current.data);
+          current = current.next;
+          }
+          }
+
+          public int pop() {
+          if(!isEmpty()) {
+          int popedData = top.data;
+          top = top.next;
+          System.out.println("Poped data " + popedData + " from the stack ");
+          return popedData;
+          }
+          System.out.println("Stack is Underflow! , poping is not possible");
+          return -1;
+          }
+
+          public int peek() {
+          if(!isEmpty()) {
+          return top.data;
+          }
+          System.out.println("Stack is underflow!");
+          return -1;
+          }
+
+          public static void main(String args[]) {
+
+          System.out.print("Stack using linkedlist");
+          StackLinkedList sa = new StackLinkedList();
+          sa.push(45);
+          sa.push(52);
+          sa.peek();
+          sa.display();
+          sa.pop();
+          sa.peek();
+          sa.display();
+          }
+          }</code></pre>
+        </div>
+
+        <h3>Common Stack Operations (Conceptual)</h3>
+        <ul>
+          <li><code>push(value)</code> – add an element to the top.</li>
+          <li><code>pop()</code> – remove and return the top element.</li>
+          <li><code>peek()</code> – view the top element without removing it.</li>
+          <li><code>isEmpty()</code> – check if the stack has no elements.</li>
+        </ul>
+        <p>These operations are typically O(1) in both array‑based and linked‑list‑based stacks.</p>
       </section>
 
       <section id="queue">
         <h2>Queue</h2>
-        <p>A queue is a <strong>FIFO</strong> (First In, First Out) data structure. The first element added is the first to be removed.</p>
+        <p>A queue is a <strong>FIFO</strong> (First In, First Out) data structure. The first element added is the first
+          to be removed.</p>
 
         <div class="code-wrap">
           <div class="code-header">
@@ -163,13 +883,16 @@ System.out.println(queue.peek()); // 20</code></pre>
 
       <section id="trees">
         <h2>Trees</h2>
-        <p>A tree is a hierarchical data structure with a root node and subtrees of children. A <strong>Binary Search Tree (BST)</strong> is a common type where left children are smaller and right children are larger than the parent.</p>
+        <p>A tree is a hierarchical data structure with a root node and subtrees of children. A <strong>Binary Search
+            Tree (BST)</strong> is a common type where left children are smaller and right children are larger than the
+          parent.</p>
         <p><em>More content coming soon.</em></p>
       </section>
 
       <section id="graphs">
         <h2>Graphs</h2>
-        <p>A graph is a collection of nodes (vertices) connected by edges. Graphs can be directed or undirected, and are used to model networks, maps, and relationships.</p>
+        <p>A graph is a collection of nodes (vertices) connected by edges. Graphs can be directed or undirected, and are
+          used to model networks, maps, and relationships.</p>
         <p><em>More content coming soon.</em></p>
       </section>
 
@@ -180,14 +903,50 @@ System.out.println(queue.peek()); // 20</code></pre>
         <div class="table-wrap">
           <table>
             <thead>
-              <tr><th>Algorithm</th><th>Best</th><th>Average</th><th>Worst</th><th>Stable</th></tr>
+              <tr>
+                <th>Algorithm</th>
+                <th>Best</th>
+                <th>Average</th>
+                <th>Worst</th>
+                <th>Stable</th>
+              </tr>
             </thead>
             <tbody>
-              <tr><td>Bubble Sort</td><td>O(n)</td><td>O(n²)</td><td>O(n²)</td><td>Yes</td></tr>
-              <tr><td>Selection Sort</td><td>O(n²)</td><td>O(n²)</td><td>O(n²)</td><td>No</td></tr>
-              <tr><td>Insertion Sort</td><td>O(n)</td><td>O(n²)</td><td>O(n²)</td><td>Yes</td></tr>
-              <tr><td>Merge Sort</td><td>O(n log n)</td><td>O(n log n)</td><td>O(n log n)</td><td>Yes</td></tr>
-              <tr><td>Quick Sort</td><td>O(n log n)</td><td>O(n log n)</td><td>O(n²)</td><td>No</td></tr>
+              <tr>
+                <td>Bubble Sort</td>
+                <td>O(n)</td>
+                <td>O(n²)</td>
+                <td>O(n²)</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Selection Sort</td>
+                <td>O(n²)</td>
+                <td>O(n²)</td>
+                <td>O(n²)</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>Insertion Sort</td>
+                <td>O(n)</td>
+                <td>O(n²)</td>
+                <td>O(n²)</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Merge Sort</td>
+                <td>O(n log n)</td>
+                <td>O(n log n)</td>
+                <td>O(n log n)</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Quick Sort</td>
+                <td>O(n log n)</td>
+                <td>O(n log n)</td>
+                <td>O(n²)</td>
+                <td>No</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -240,18 +999,57 @@ System.out.println(queue.peek()); // 20</code></pre>
         </div>
       </section>
 
-    </main>
+      <!-- Design Patterns -->
+
+      <section id="design-patterns">
+        <h2>Design Patterns</h2>
+        <ol type="1">
+          <li>Two Pointer Algorithm</li>
+          <li>Sliding Window</li>
+          <li>Binary Search</li>
+          <li>Fast & Slow Pointers</li>
+          <li>Divide and Conquer</li>
+          <li>Recursion & Backtracking</li>
+          <li>Dynamic Programming</li>
+          <li>Greedy Algorithm</li>
+          <li>BFS / DFS (Graph Traversal)</li>
+        </ol>
+        <h3>Two Pointer Algorithm</h3>
+        <p>The Two Pointer Algorithm is a technique used to solve problems that involve searching for pairs of
+          elements in a sorted array or linked list. It uses two pointers that start at opposite ends of the data
+          structure and move towards each other based on certain conditions.</p>
+          
+          <div class="code-section">
+            <h5>Water storage in a wall</h5>
+            <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Stack using List / Array</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>
+
+            </code>
+
+          </div>
+      
+
+      </section>
+      </main>
   </div>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Code &amp;&amp; Syntax. All rights reserved.</p>
     <p>Contact us: <a href="mailto:info@syntaxcode.com">info@syntaxcode.com</a></p>
-    <a href="#header" class="back-to-top">⬆ Back to Top</a>
+    <a href="#intro" class="back-to-top">⬆ Back to Top</a>
   </footer>
 
   <!-- Fullscreen Overlay -->
-  <div class="fullscreen-overlay" id="fullscreen-overlay" role="dialog" aria-modal="true" aria-label="Fullscreen code view">
+  <div class="fullscreen-overlay" id="fullscreen-overlay" role="dialog" aria-modal="true"
+    aria-label="Fullscreen code view">
     <div class="fullscreen-inner">
       <div class="fullscreen-header">
         <span id="fullscreen-label">Code</span>
@@ -263,4 +1061,5 @@ System.out.println(queue.peek()); // 20</code></pre>
 
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

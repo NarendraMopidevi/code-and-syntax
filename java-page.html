@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Code &amp;&amp; Syntax | Java</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
   <!-- Header -->
   <header class="header" id="header">
-    <div id="master-title"><h1>Code &amp;&amp; Syntax</h1></div>
+    <div id="master-title">
+      <h1>Code &amp;&amp; Syntax</h1>
+    </div>
     <nav aria-label="Main navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -19,6 +24,7 @@
         <li><a href="python-page.html">Python</a></li>
         <li><a href="spl-page.html">SQL</a></li>
         <li><a href="dsa-page.html">DSA</a></li>
+        <li><a href="codes.html">CODES</a></li>
         <li><a href="about.html">About</a></li>
       </ul>
     </nav>
@@ -34,6 +40,7 @@
         <li><a href="#intro">Introduction</a></li>
         <li><a href="#syntax">Basic Syntax</a></li>
         <li><a href="#data-types">Data Types</a></li>
+        <li><a>Non Primitive Data Types</a></li>
         <li><a href="#control-statements">Control Statements</a></li>
         <li><a href="#oop">OOP Concepts</a></li>
         <li><a href="#collections">Collections</a></li>
@@ -49,10 +56,18 @@
       <!-- Introduction -->
       <section id="intro">
         <h2>Introduction to Java</h2>
-        <p><strong>Java</strong> is a powerful, high-level, object-oriented programming language developed by <strong>Sun Microsystems</strong> (now owned by <strong>Oracle Corporation</strong>) in 1995. It is designed to be platform-independent and follows the principle of <strong>"Write Once, Run Anywhere" (WORA)</strong>, meaning code written in Java can run on any system that has a <strong>Java Virtual Machine (JVM)</strong>.</p>
+        <p><strong>Java</strong> is a powerful, high-level, object-oriented programming language developed by
+          <strong>Sun Microsystems</strong> (now owned by <strong>Oracle Corporation</strong>) in 1995. It is designed
+          to be platform-independent and follows the principle of <strong>"Write Once, Run Anywhere" (WORA)</strong>,
+          meaning code written in Java can run on any system that has a <strong>Java Virtual Machine (JVM)</strong>.
+        </p>
 
         <h3>How Java Works</h3>
-        <p>Java programs are first written in source files with a <code>.java</code> extension. These files are compiled by the <strong>Java Compiler (javac)</strong> into platform-independent <strong>bytecode</strong> stored in <code>.class</code> files. The <strong>JVM</strong> then executes this bytecode by converting it into machine code.</p>
+        <p>Java programs are first written in source files with a <code>.java</code> extension. These files are compiled
+          by the <strong>Java Compiler (javac)</strong> into platform-independent <strong>bytecode</strong> stored in
+          <code>.class</code> files. The <strong>JVM</strong> then executes this bytecode by converting it into machine
+          code.
+        </p>
 
         <div class="code-wrap">
           <div class="code-header">
@@ -80,16 +95,40 @@
         <div class="table-wrap">
           <table>
             <thead>
-              <tr><th>Application Area</th><th>Examples</th></tr>
+              <tr>
+                <th>Application Area</th>
+                <th>Examples</th>
+              </tr>
             </thead>
             <tbody>
-              <tr><td>Web Applications</td><td>Spring Boot, JSP, Servlets</td></tr>
-              <tr><td>Mobile Applications</td><td>Android Development</td></tr>
-              <tr><td>Enterprise Applications</td><td>ERP, Banking Systems</td></tr>
-              <tr><td>Cloud-Based Applications</td><td>AWS, Google Cloud Back-End</td></tr>
-              <tr><td>Scientific Applications</td><td>MATLAB, Simulation Tools</td></tr>
-              <tr><td>Big Data Technologies</td><td>Hadoop, Spark</td></tr>
-              <tr><td>Game Development</td><td>LibGDX, jMonkeyEngine</td></tr>
+              <tr>
+                <td>Web Applications</td>
+                <td>Spring Boot, JSP, Servlets</td>
+              </tr>
+              <tr>
+                <td>Mobile Applications</td>
+                <td>Android Development</td>
+              </tr>
+              <tr>
+                <td>Enterprise Applications</td>
+                <td>ERP, Banking Systems</td>
+              </tr>
+              <tr>
+                <td>Cloud-Based Applications</td>
+                <td>AWS, Google Cloud Back-End</td>
+              </tr>
+              <tr>
+                <td>Scientific Applications</td>
+                <td>MATLAB, Simulation Tools</td>
+              </tr>
+              <tr>
+                <td>Big Data Technologies</td>
+                <td>Hadoop, Spark</td>
+              </tr>
+              <tr>
+                <td>Game Development</td>
+                <td>LibGDX, jMonkeyEngine</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -108,7 +147,10 @@
       <!-- Basic Syntax -->
       <section id="syntax">
         <h2>Basic Syntax</h2>
-        <p>Every Java program begins with a <strong>class definition</strong> and a <strong>main()</strong> method, which serves as the <strong>entry point</strong> of execution. The JVM starts running your program from <code>main()</code>.</p>
+        <p>Every Java program begins with a <strong>class definition</strong> and a <strong>main()</strong> method,
+          which serves as the <strong>entry point</strong> of execution. The JVM starts running your program from
+          <code>main()</code>.
+        </p>
 
         <h3>Example Program</h3>
         <div class="code-wrap">
@@ -128,7 +170,8 @@ class HelloWorld {
         </div>
 
         <h3>Understanding the main() Method</h3>
-        <p>The line <code>public static void main(String[] args)</code> is the JVM's entry point. Here's what each keyword means:</p>
+        <p>The line <code>public static void main(String[] args)</code> is the JVM's entry point. Here's what each
+          keyword means:</p>
         <ul class="list-items">
           <li><strong>public:</strong> Makes <code>main()</code> accessible to the JVM from outside the class.</li>
           <li><strong>static:</strong> Belongs to the class itself — JVM calls it without creating an object.</li>
@@ -158,7 +201,9 @@ class HelloWorld {
         </div>
 
         <h4>Output</h4>
-        <div class="output-block"><pre><code>First argument: Hello</code></pre></div>
+        <div class="output-block">
+          <pre><code>First argument: Hello</code></pre>
+        </div>
 
         <h3>Internal Execution Flow</h3>
         <ol>
@@ -170,78 +215,164 @@ class HelloWorld {
         </ol>
       </section>
 
-      <!-- Data Types -->
+      <!-- Data Types --><!-- Data Types Section -->
       <section id="data-types">
         <h2>Java Data Types</h2>
-        <p>In Java, <strong>data types</strong> define the kind of values a variable can store and the memory it occupies. Java is a <strong>strongly typed</strong> language — every variable must have a declared type before use.</p>
+
+        <p>A data type in Java tells what kind of value a variable can store.
+          It also defines memory usage and allowed operations.</p>
 
         <h3>Types of Data Types</h3>
         <ul class="list-items">
-          <li><strong>Primitive Data Types:</strong> Predefined by Java, used for simple values like numbers and characters.</li>
-          <li><strong>Non-Primitive Data Types:</strong> Created by programmers — include classes, arrays, and interfaces.</li>
+          <li>Primitive Data Types</li>
+          <li>Non Primitive Data Types</li>
         </ul>
+      </section>
 
-        <h3>Primitive Data Types</h3>
+
+      <!-- Primitive Data Types Section -->
+      <section id="primitive-data-types">
+        <h2>Primitive Data Types</h2>
+
+        <p>Primitive data types store simple values directly in memory.</p>
+
         <div class="table-wrap">
           <table>
             <thead>
-              <tr><th>Data Type</th><th>Size</th><th>Example</th><th>Description</th></tr>
+              <tr>
+                <th>Data Type</th>
+                <th>Size</th>
+                <th>Use</th>
+              </tr>
             </thead>
             <tbody>
-              <tr><td><code>byte</code></td><td>1 byte</td><td><code>byte age = 25;</code></td><td>Small integers (-128 to 127)</td></tr>
-              <tr><td><code>short</code></td><td>2 bytes</td><td><code>short salary = 10000;</code></td><td>Larger integers than byte</td></tr>
-              <tr><td><code>int</code></td><td>4 bytes</td><td><code>int num = 5000;</code></td><td>Commonly used integer type</td></tr>
-              <tr><td><code>long</code></td><td>8 bytes</td><td><code>long dist = 123456789L;</code></td><td>Very large integers</td></tr>
-              <tr><td><code>float</code></td><td>4 bytes</td><td><code>float price = 12.34f;</code></td><td>Decimal (less precision)</td></tr>
-              <tr><td><code>double</code></td><td>8 bytes</td><td><code>double rate = 19.99;</code></td><td>Decimal (high precision)</td></tr>
-              <tr><td><code>char</code></td><td>2 bytes</td><td><code>char grade = 'A';</code></td><td>Single character / ASCII</td></tr>
-              <tr><td><code>boolean</code></td><td>1 bit</td><td><code>boolean isValid = true;</code></td><td>true or false</td></tr>
+              <tr>
+                <td>byte</td>
+                <td>1 byte</td>
+                <td>Small numbers</td>
+              </tr>
+              <tr>
+                <td>short</td>
+                <td>2 bytes</td>
+                <td>Medium numbers</td>
+              </tr>
+              <tr>
+                <td>int</td>
+                <td>4 bytes</td>
+                <td>Common integers</td>
+              </tr>
+              <tr>
+                <td>long</td>
+                <td>8 bytes</td>
+                <td>Large numbers</td>
+              </tr>
+              <tr>
+                <td>float</td>
+                <td>4 bytes</td>
+                <td>Decimal values</td>
+              </tr>
+              <tr>
+                <td>double</td>
+                <td>8 bytes</td>
+                <td>High precision decimals</td>
+              </tr>
+              <tr>
+                <td>char</td>
+                <td>2 bytes</td>
+                <td>Single character</td>
+              </tr>
+              <tr>
+                <td>boolean</td>
+                <td>1 bit</td>
+                <td>true or false</td>
+              </tr>
             </tbody>
           </table>
         </div>
 
-        <h3>Example Code</h3>
-        <div class="code-wrap">
-          <div class="code-header">
-            <span class="code-lang">Java</span>
-            <div style="display:flex;gap:6px">
-              <button class="expand-btn" title="View fullscreen">⛶</button>
-              <button class="copy-btn">Copy</button>
-            </div>
-          </div>
-          <pre><code>class DataTypeExample {
-    public static void main(String[] args) {
-        int age = 21;
-        double salary = 35000.50;
-        char grade = 'A';
-        boolean isStudent = true;
+        <p>Primitive types are fast and memory efficient.</p>
+      </section>
 
-        System.out.println("Age: " + age);
-        System.out.println("Salary: " + salary);
-        System.out.println("Grade: " + grade);
-        System.out.println("Is Student: " + isStudent);
-    }
-}</code></pre>
+
+      <!-- Non Primitive Data Types Section -->
+      <section id="non-primitive-data-types">
+        <h2>Non Primitive Data Types</h2>
+
+        <p>Non primitive data types store references instead of actual values.</p>
+
+        <p>They are more complex and used to store collections or objects.</p>
+
+        <p>Examples include String Array Class and Interface.</p>
+
+        <p>They have methods and can perform operations on data.</p>
+
+        <p>Detailed explanation can be added separately.</p>
+      </section>
+
+
+      <!-- Type Conversion Section -->
+      <section id="type-conversion">
+        <h2>Type Conversion</h2>
+
+        <p>Type conversion means converting one data type into another.</p>
+
+        <h3>Implicit Conversion</h3>
+        <p>This happens automatically when converting smaller type to larger type.</p>
+        <p>No data loss happens in this conversion.</p>
+
+        <div class="code-wrap">
+          <pre><code>int a = 10;
+double b = a;</code></pre>
         </div>
 
-        <h4>Output</h4>
-        <div class="output-block"><pre><code>Age: 21
-Salary: 35000.5
-Grade: A
-Is Student: true</code></pre></div>
+        <p>Order</p>
+        <p>byte to short to int to long to float to double</p>
 
-        <h3>Key Points</h3>
-        <ul class="list-items">
-          <li>Primitive types are stored by value and have fixed sizes.</li>
-          <li>Non-primitive types (like Strings) store references, not direct values.</li>
-          <li>Always choose the smallest data type that fits your value to optimize memory.</li>
-        </ul>
+        <h3>Explicit Conversion</h3>
+        <p>This is done manually by the programmer.</p>
+        <p>Used when converting larger type to smaller type.</p>
+        <p>Data loss may occur.</p>
+
+        <div class="code-wrap">
+          <pre><code>double x = 10.75;
+int y = (int) x;</code></pre>
+        </div>
+      </section>
+
+
+      <!-- Type Casting Section -->
+      <section id="type-casting">
+        <h2>Type Casting</h2>
+
+        <p>Type casting is the process of converting one data type into another manually.</p>
+
+        <div class="code-wrap">
+          <pre><code>double value = 9.8;
+int result = (int) value;</code></pre>
+        </div>
+
+        <h3>Autoboxing</h3>
+        <p>Converting primitive type into object automatically.</p>
+
+        <div class="code-wrap">
+          <pre><code>int a = 5;
+Integer obj = a;</code></pre>
+        </div>
+
+        <h3>Unboxing</h3>
+        <p>Converting object into primitive type.</p>
+
+        <div class="code-wrap">
+          <pre><code>Integer b = 10;
+int c = b;</code></pre>
+        </div>
       </section>
 
       <!-- Control Statements -->
       <section id="control-statements">
         <h2>Java Control Statements</h2>
-        <p><strong>Control statements</strong> determine the flow of program execution — making decisions, repeating tasks, and controlling which code executes based on conditions.</p>
+        <p><strong>Control statements</strong> determine the flow of program execution — making decisions, repeating
+          tasks, and controlling which code executes based on conditions.</p>
 
         <h3>Types of Control Statements</h3>
         <ul class="list-items">
@@ -272,7 +403,9 @@ Is Student: true</code></pre></div>
     }
 }</code></pre>
         </div>
-        <div class="output-block"><pre><code>Eligible to vote</code></pre></div>
+        <div class="output-block">
+          <pre><code>Eligible to vote</code></pre>
+        </div>
 
         <h3>2. if-else Statement</h3>
         <p>Provides an alternative block when the condition is <code>false</code>.</p>
@@ -295,7 +428,9 @@ Is Student: true</code></pre></div>
     }
 }</code></pre>
         </div>
-        <div class="output-block"><pre><code>Negative Number</code></pre></div>
+        <div class="output-block">
+          <pre><code>Negative Number</code></pre>
+        </div>
 
         <h3>3. Nested if Statement</h3>
         <p>An <code>if</code> inside another <code>if</code>, used for multiple conditional checks.</p>
@@ -319,7 +454,9 @@ Is Student: true</code></pre></div>
     }
 }</code></pre>
         </div>
-        <div class="output-block"><pre><code>Eligible to Vote in India</code></pre></div>
+        <div class="output-block">
+          <pre><code>Eligible to Vote in India</code></pre>
+        </div>
 
         <h3>4. switch Statement</h3>
         <p>Executes one case from multiple options based on a variable's value.</p>
@@ -343,7 +480,9 @@ Is Student: true</code></pre></div>
     }
 }</code></pre>
         </div>
-        <div class="output-block"><pre><code>Wednesday</code></pre></div>
+        <div class="output-block">
+          <pre><code>Wednesday</code></pre>
+        </div>
 
         <!-- Looping -->
         <h2>Looping Statements</h2>
@@ -366,11 +505,13 @@ Is Student: true</code></pre></div>
     }
 }</code></pre>
         </div>
-        <div class="output-block"><pre><code>Count: 1
+        <div class="output-block">
+          <pre><code>Count: 1
 Count: 2
 Count: 3
 Count: 4
-Count: 5</code></pre></div>
+Count: 5</code></pre>
+        </div>
 
         <h3>2. while Loop</h3>
         <p>Executes repeatedly as long as the condition is <code>true</code>.</p>
@@ -392,9 +533,11 @@ Count: 5</code></pre></div>
     }
 }</code></pre>
         </div>
-        <div class="output-block"><pre><code>Iteration: 1
+        <div class="output-block">
+          <pre><code>Iteration: 1
 Iteration: 2
-Iteration: 3</code></pre></div>
+Iteration: 3</code></pre>
+        </div>
 
         <h3>3. do-while Loop</h3>
         <p>Executes the block at least once before checking the condition.</p>
@@ -416,9 +559,11 @@ Iteration: 3</code></pre></div>
     }
 }</code></pre>
         </div>
-        <div class="output-block"><pre><code>Value: 1
+        <div class="output-block">
+          <pre><code>Value: 1
 Value: 2
-Value: 3</code></pre></div>
+Value: 3</code></pre>
+        </div>
 
         <!-- Jump Statements -->
         <h2>Jump Statements</h2>
@@ -442,8 +587,10 @@ Value: 3</code></pre></div>
     }
 }</code></pre>
         </div>
-        <div class="output-block"><pre><code>i = 1
-i = 2</code></pre></div>
+        <div class="output-block">
+          <pre><code>i = 1
+i = 2</code></pre>
+        </div>
 
         <h3>2. continue Statement</h3>
         <p>Skips the current iteration and continues with the next loop cycle.</p>
@@ -464,10 +611,12 @@ i = 2</code></pre></div>
     }
 }</code></pre>
         </div>
-        <div class="output-block"><pre><code>i = 1
+        <div class="output-block">
+          <pre><code>i = 1
 i = 2
 i = 4
-i = 5</code></pre></div>
+i = 5</code></pre>
+        </div>
 
         <h3>3. return Statement</h3>
         <p>Exits a method and optionally returns a value to the caller.</p>
@@ -490,48 +639,57 @@ i = 5</code></pre></div>
     }
 }</code></pre>
         </div>
-        <div class="output-block"><pre><code>Sum: 15</code></pre></div>
+        <div class="output-block">
+          <pre><code>Sum: 15</code></pre>
+        </div>
 
         <h3>Summary</h3>
         <ul class="list-items">
           <li><code>if</code>, <code>if-else</code>, and <code>switch</code> handle decision-making.</li>
           <li><code>for</code>, <code>while</code>, and <code>do-while</code> handle repetitive tasks.</li>
-          <li><code>break</code>, <code>continue</code>, and <code>return</code> control flow within loops and methods.</li>
+          <li><code>break</code>, <code>continue</code>, and <code>return</code> control flow within loops and methods.
+          </li>
         </ul>
       </section>
 
       <!-- OOP Concepts -->
       <section id="oop">
         <h2>OOP Concepts</h2>
-        <p>Java supports the four main OOP principles: <strong>Encapsulation</strong>, <strong>Inheritance</strong>, <strong>Polymorphism</strong>, and <strong>Abstraction</strong>.</p>
+        <p>Java supports the four main OOP principles: <strong>Encapsulation</strong>, <strong>Inheritance</strong>,
+          <strong>Polymorphism</strong>, and <strong>Abstraction</strong>.
+        </p>
         <p><em>More content coming soon.</em></p>
       </section>
 
       <!-- Collections -->
       <section id="collections">
         <h2>Collections</h2>
-        <p>The Java Collections Framework provides data structures like ArrayList, HashMap, HashSet, and more for efficient data handling.</p>
+        <p>The Java Collections Framework provides data structures like ArrayList, HashMap, HashSet, and more for
+          efficient data handling.</p>
         <p><em>More content coming soon.</em></p>
       </section>
 
       <!-- Exception Handling -->
       <section id="exceptions">
         <h2>Exception Handling</h2>
-        <p>Java handles runtime errors using <code>try</code>, <code>catch</code>, and <code>finally</code> blocks to prevent abrupt program termination.</p>
+        <p>Java handles runtime errors using <code>try</code>, <code>catch</code>, and <code>finally</code> blocks to
+          prevent abrupt program termination.</p>
         <p><em>More content coming soon.</em></p>
       </section>
 
       <!-- File Handling -->
       <section id="file">
         <h2>File Handling</h2>
-        <p>Java provides classes like <code>FileReader</code>, <code>FileWriter</code>, and <code>BufferedReader</code> for reading and writing files.</p>
+        <p>Java provides classes like <code>FileReader</code>, <code>FileWriter</code>, and <code>BufferedReader</code>
+          for reading and writing files.</p>
         <p><em>More content coming soon.</em></p>
       </section>
 
       <!-- Multithreading -->
       <section id="threads">
         <h2>Multithreading</h2>
-        <p>Java supports concurrent execution via the <code>Thread</code> class and the <code>Runnable</code> interface, enabling multiple tasks to run simultaneously.</p>
+        <p>Java supports concurrent execution via the <code>Thread</code> class and the <code>Runnable</code> interface,
+          enabling multiple tasks to run simultaneously.</p>
         <p><em>More content coming soon.</em></p>
       </section>
 
@@ -546,7 +704,8 @@ i = 5</code></pre></div>
   </footer>
 
   <!-- Fullscreen Overlay -->
-  <div class="fullscreen-overlay" id="fullscreen-overlay" role="dialog" aria-modal="true" aria-label="Fullscreen code view">
+  <div class="fullscreen-overlay" id="fullscreen-overlay" role="dialog" aria-modal="true"
+    aria-label="Fullscreen code view">
     <div class="fullscreen-inner">
       <div class="fullscreen-header">
         <span id="fullscreen-label">Code</span>
@@ -558,4 +717,5 @@ i = 5</code></pre></div>
 
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>
