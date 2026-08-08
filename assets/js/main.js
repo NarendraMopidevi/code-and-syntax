@@ -21,22 +21,46 @@
   }
 
   /* ===== ACTIVE SIDEBAR HIGHLIGHT ON SCROLL ===== */
-  const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.sidebar ul li a');
 
-  if (sections.length && navLinks.length) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          navLinks.forEach(a => a.classList.remove('active-section'));
-          const match = document.querySelector(`.sidebar a[href="#${entry.target.id}"]`);
-          if (match) match.classList.add('active-section');
-        }
-      });
-    }, { rootMargin: '-20% 0px -70% 0px' });
+const sections = Array.from(document.querySelectorAll('section[id]'))
+    .filter(section => {
+        return document.querySelector(
+            `.sidebar a[href="#${section.id}"]`
+        );
+    });
 
-    sections.forEach(s => observer.observe(s));
-  }
+if (sections.length && navLinks.length) {
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                navLinks.forEach(a => {
+                    a.classList.remove('active-section');
+                });
+
+                const match = document.querySelector(
+                    `.sidebar a[href="#${entry.target.id}"]`
+                );
+
+                if (match) {
+                    match.classList.add('active-section');
+                }
+            }
+
+        });
+
+    }, {
+        rootMargin: '-20% 0px -70% 0px'
+    });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+}
 
   /* ===== COPY TO CLIPBOARD ===== */
   document.querySelectorAll('.copy-btn').forEach(btn => {
@@ -82,3 +106,24 @@
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeOverlay(); });
   }
 })();
+
+
+function displayCode(selectElement) {
+    const language = selectElement.value;
+
+    // Find the code-wrap containing this select
+    const codeWrap = selectElement.closest(".code-wrap");
+
+    // Find Java and Python code blocks inside this code-wrap
+    const javaCode = codeWrap.querySelector(".javaCode");
+    const pythonCode = codeWrap.querySelector(".pythonCode");
+
+    if (language === "python") {
+        javaCode.style.display = "none";
+        pythonCode.style.display = "block";
+    } else {
+        javaCode.style.display = "block";
+        pythonCode.style.display = "none";
+    }
+}
+

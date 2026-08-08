@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code &amp;&amp; Syntax | AIML</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div id="master-title"><h1>Code &amp;&amp; Syntax</h1></div>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="java-page.html">Java</a></li>
+        <li><a href="python-page.html">Python</a></li>
+        <li><a href="spl-page.html" >SQL</a></li>
+        <li><a href="aiml.html" class="active">AIML</a></li>
+        <li><a href="dsa-page.html">DSA</a></li>
+        <li><a href="codes.html">CODES</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" aria-label="Toggle sidebar" aria-expanded="false">☰</button>
+  </header>
+
+  <div class="content-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" aria-label="AIML topics">
+      <h2>AIML Topics</h2>
+      <ul>
+        <li><a href="#intro">Introduction to AI</a></li>
+        <li><a href="#why-ai">Why AI Emerged</a></li>
+        <li><a href="#types">Types of AI</a></li>
+        <li><a href="#branches">Branches of AI</a></li>
+        <li><a href="#ml-fundamentals">ML Fundamentals</a></li>
+        <li><a href="#supervised">Supervised Learning</a></li>
+        <li><a href="#unsupervised">Unsupervised Learning</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <section id="intro">
+        <h2>Introduction to AI</h2>
+        <p><strong>Artificial Intelligence (AI)</strong> is the branch of computer science concerned with building machines and systems capable of performing tasks that normally require human intelligence — such as reasoning, learning, perceiving, understanding language, and making decisions.</p>
+        <p>Instead of following a fixed set of instructions for every situation, an AI system is designed to <em>learn from experience (data)</em>, <em>adapt to new inputs</em>, and <em>improve its performance over time</em> — much like how a human learns from practice rather than memorizing every possible answer.</p>
+        <p>AI is not a single technology but an umbrella field that includes Machine Learning, Deep Learning, Natural Language Processing, Computer Vision, Robotics, and more (covered in the Branches section below).</p>
+      </section>
+
+      <section id="why-ai">
+        <h2>Why AI Emerged (Traditional Programming vs AI)</h2>
+        <p>In <strong>traditional programming</strong>, a developer writes explicit, step-by-step rules (logic) that tell the computer exactly what to do for every possible input.</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Traditional Programming</span>
+          </div>
+          <pre><code>Input  +  Rules (written by programmer)
+        ↓
+     Program
+        ↓
+     Output</code></pre>
+        </div>
+
+        <p>This works well for problems with clear, finite logic — like calculating a bill or sorting a list. But it breaks down for problems where the "rules" are too complex, too numerous, or unknown to a human — for example:</p>
+        <ul>
+          <li>Recognizing a face in a photo</li>
+          <li>Understanding the meaning of a sentence</li>
+          <li>Predicting whether an email is spam</li>
+          <li>Detecting fraud in millions of transactions</li>
+        </ul>
+        <p>No programmer can manually write "if-else" rules to cover every face, every sentence, or every fraud pattern. This limitation of traditional programming is exactly why AI (and specifically Machine Learning) emerged — instead of the programmer supplying the rules, the <strong>machine learns the rules itself from data</strong>.</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Machine Learning Approach</span>
+          </div>
+          <pre><code>Input  +  Output (Data with examples)
+        ↓
+   Learning Algorithm
+        ↓
+   Rules / Model (learned automatically)</code></pre>
+        </div>
+
+        <p>In short: <strong>Traditional programming = Data + Rules → Output</strong>, while <strong>Machine Learning = Data + Output → Rules</strong>. This shift is what allows AI systems to handle complex, real-world problems that are impossible to hand-code.</p>
+      </section>
+
+      <section id="types">
+        <h2>Types of AI</h2>
+        <p>AI can be classified in two common ways: by <strong>capability</strong> (how powerful/intelligent it is) and by <strong>functionality</strong> (how it processes and remembers information).</p>
+
+        <h3>1. Based on Capability</h3>
+        <ul>
+          <li><strong>Narrow AI (ANI – Artificial Narrow Intelligence):</strong> Designed to perform a single, specific task well (e.g., voice assistants, recommendation systems, self-driving cars, chatbots). All AI that exists and is in use today falls into this category.</li>
+          <li><strong>General AI (AGI – Artificial General Intelligence):</strong> A hypothetical AI with the ability to understand, learn, and apply intelligence across <em>any</em> task at a human level — not yet achieved.</li>
+          <li><strong>Super AI (ASI – Artificial Super Intelligence):</strong> A theoretical form of AI that would surpass human intelligence in every domain, including creativity and problem-solving. Purely conceptual/futuristic at this stage.</li>
+        </ul>
+
+        <h3>2. Based on Functionality</h3>
+        <ul>
+          <li><strong>Reactive Machines:</strong> The most basic type — they react to current input with no memory of the past and cannot learn from prior experience (e.g., IBM's Deep Blue chess-playing computer).</li>
+          <li><strong>Limited Memory:</strong> Can use past, recent data to make decisions (e.g., self-driving cars use recent sensor data to make driving decisions). Most modern AI systems fall here.</li>
+          <li><strong>Theory of Mind:</strong> A future-stage AI concept that would understand human emotions, beliefs, and intentions, and interact accordingly. Still in research.</li>
+          <li><strong>Self-Aware AI:</strong> A hypothetical AI with its own consciousness and self-awareness — purely theoretical, not achieved.</li>
+        </ul>
+      </section>
+
+      <section id="branches">
+        <h2>Branches of AI</h2>
+        <p>AI is an umbrella field made up of several specialized branches, each tackling a different type of problem. Here's a quick definition of each, followed by a tree diagram showing how they relate:</p>
+        <ul>
+          <li><strong>Machine Learning (ML):</strong> Enables systems to learn patterns from data and improve automatically without being explicitly programmed.</li>
+          <li><strong>Deep Learning (DL):</strong> A subset of ML using multi-layered artificial neural networks to learn from large amounts of data (used in image/speech recognition).</li>
+          <li><strong>Natural Language Processing (NLP):</strong> Enables machines to understand, interpret, and generate human language (chatbots, translation, sentiment analysis).</li>
+          <li><strong>Computer Vision:</strong> Enables machines to interpret and understand visual information from images or video (face recognition, object detection).</li>
+          <li><strong>Robotics:</strong> Combines AI with mechanical engineering to build machines that can sense, plan, and physically act in the real world.</li>
+          <li><strong>Expert Systems:</strong> Rule-based systems that mimic the decision-making ability of a human expert in a specific domain (e.g., medical diagnosis systems).</li>
+          <li><strong>Fuzzy Logic:</strong> A reasoning method that handles approximate/partial truth (values between 0 and 1) rather than strict true/false logic, useful for real-world uncertainty.</li>
+        </ul>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Tree Diagram</span>
+          </div>
+          <svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;font-family:sans-serif;">
+            <!-- Root -->
+            <rect x="380" y="10" width="140" height="45" rx="8" fill="#2b6cb0" />
+            <text x="450" y="38" text-anchor="middle" fill="#fff" font-size="16" font-weight="600">AI</text>
+
+            <!-- Level 1 branches -->
+            <line x1="450" y1="55" x2="140" y2="110" stroke="#888" stroke-width="2"/>
+            <line x1="450" y1="55" x2="330" y2="110" stroke="#888" stroke-width="2"/>
+            <line x1="450" y1="55" x2="450" y2="110" stroke="#888" stroke-width="2"/>
+            <line x1="450" y1="55" x2="570" y2="110" stroke="#888" stroke-width="2"/>
+            <line x1="450" y1="55" x2="700" y2="110" stroke="#888" stroke-width="2"/>
+            <line x1="450" y1="55" x2="820" y2="110" stroke="#888" stroke-width="2"/>
+
+            <rect x="70" y="110" width="140" height="45" rx="8" fill="#3182ce"/>
+            <text x="140" y="138" text-anchor="middle" fill="#fff" font-size="13" font-weight="600">Machine Learning</text>
+
+            <rect x="260" y="110" width="140" height="45" rx="8" fill="#3182ce"/>
+            <text x="330" y="138" text-anchor="middle" fill="#fff" font-size="13" font-weight="600">Deep Learning</text>
+
+            <rect x="380" y="110" width="140" height="45" rx="8" fill="#3182ce"/>
+            <text x="450" y="138" text-anchor="middle" fill="#fff" font-size="13" font-weight="600">NLP</text>
+
+            <rect x="500" y="110" width="140" height="45" rx="8" fill="#3182ce"/>
+            <text x="570" y="138" text-anchor="middle" fill="#fff" font-size="13" font-weight="600">Computer Vision</text>
+
+            <rect x="630" y="110" width="140" height="45" rx="8" fill="#3182ce"/>
+            <text x="700" y="138" text-anchor="middle" fill="#fff" font-size="13" font-weight="600">Robotics</text>
+
+            <rect x="750" y="110" width="140" height="45" rx="8" fill="#3182ce"/>
+            <text x="820" y="130" text-anchor="middle" fill="#fff" font-size="13" font-weight="600">Expert Systems /</text>
+            <text x="820" y="146" text-anchor="middle" fill="#fff" font-size="13" font-weight="600">Fuzzy Logic</text>
+
+            <!-- ML children -->
+            <line x1="140" y1="155" x2="60" y2="210" stroke="#aaa" stroke-width="2"/>
+            <line x1="140" y1="155" x2="140" y2="210" stroke="#aaa" stroke-width="2"/>
+            <line x1="140" y1="155" x2="220" y2="210" stroke="#aaa" stroke-width="2"/>
+
+            <rect x="10" y="210" width="100" height="42" rx="6" fill="#63b3ed"/>
+            <text x="60" y="228" text-anchor="middle" fill="#062a4d" font-size="11" font-weight="600">Supervised</text>
+            <text x="60" y="242" text-anchor="middle" fill="#062a4d" font-size="11" font-weight="600">Learning</text>
+
+            <rect x="90" y="210" width="100" height="42" rx="6" fill="#63b3ed"/>
+            <text x="140" y="228" text-anchor="middle" fill="#062a4d" font-size="11" font-weight="600">Unsupervised</text>
+            <text x="140" y="242" text-anchor="middle" fill="#062a4d" font-size="11" font-weight="600">Learning</text>
+
+            <rect x="170" y="210" width="100" height="42" rx="6" fill="#63b3ed"/>
+            <text x="220" y="228" text-anchor="middle" fill="#062a4d" font-size="11" font-weight="600">Reinforcement</text>
+            <text x="220" y="242" text-anchor="middle" fill="#062a4d" font-size="11" font-weight="600">Learning</text>
+
+            <!-- DL children -->
+            <line x1="330" y1="155" x2="280" y2="210" stroke="#aaa" stroke-width="2"/>
+            <line x1="330" y1="155" x2="360" y2="210" stroke="#aaa" stroke-width="2"/>
+
+            <rect x="250" y="210" width="70" height="42" rx="6" fill="#63b3ed"/>
+            <text x="285" y="235" text-anchor="middle" fill="#062a4d" font-size="11" font-weight="600">CNN</text>
+
+            <rect x="330" y="210" width="70" height="42" rx="6" fill="#63b3ed"/>
+            <text x="365" y="235" text-anchor="middle" fill="#062a4d" font-size="11" font-weight="600">RNN</text>
+
+            <!-- Caption -->
+            <text x="450" y="290" text-anchor="middle" fill="#555" font-size="12" font-style="italic">
+              AI branches out into specialized fields; Machine Learning and Deep Learning further split into their own learning approaches / architectures.
+            </text>
+          </svg>
+        </div>
+      </section>
+
+      <section id="ml-fundamentals">
+        <h2>Machine Learning Fundamentals</h2>
+        <p><strong>Machine Learning (ML)</strong> is a subset of AI that gives computers the ability to learn patterns from data and make predictions or decisions <em>without being explicitly programmed</em> for every scenario.</p>
+        <p>ML is broadly divided into three main types:</p>
+        <ul>
+          <li><strong>Supervised Learning</strong> – learns from labeled data (explained in detail below)</li>
+          <li><strong>Unsupervised Learning</strong> – learns from unlabeled data (explained in detail below)</li>
+          <li><strong>Reinforcement Learning</strong> – learns by interacting with an environment and receiving rewards or penalties for actions taken (e.g., an agent playing a game learns which moves earn the highest reward over time).</li>
+        </ul>
+      </section>
+
+      <section id="supervised">
+        <h2>Supervised Learning</h2>
+        <p><strong>Definition:</strong> Supervised learning is a type of machine learning where the model is trained on a <em>labeled dataset</em> — meaning each training example includes both the input and the correct output (the "label" or "answer"). The model learns a mapping function from inputs to outputs, and uses that function to predict outputs for new, unseen inputs.</p>
+
+        <p><strong>How it works:</strong></p>
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Workflow</span>
+          </div>
+          <pre><code>Labeled Training Data (Input → Known Output)
+            ↓
+     Model learns the mapping
+            ↓
+  Test on new/unseen input
+            ↓
+     Predicted Output</code></pre>
+        </div>
+
+        <p>Supervised learning problems fall into two main categories:</p>
+        <ul>
+          <li><strong>Classification:</strong> The output is a discrete category/class (e.g., "spam" or "not spam", "cat" or "dog"). Common algorithms: Logistic Regression, Decision Trees, Random Forest, Support Vector Machine (SVM), K-Nearest Neighbors (KNN), Naive Bayes.</li>
+          <li><strong>Regression:</strong> The output is a continuous numerical value (e.g., predicting house price, temperature, or stock value). Common algorithms: Linear Regression, Polynomial Regression, Ridge/Lasso Regression.</li>
+        </ul>
+
+        <p><strong>Real-world examples:</strong> Email spam detection, credit scoring, medical diagnosis (disease/no disease), house price prediction, handwriting recognition.</p>
+      </section>
+
+      <section id="unsupervised">
+        <h2>Unsupervised Learning</h2>
+        <p><strong>Definition:</strong> Unsupervised learning is a type of machine learning where the model is trained on <em>unlabeled data</em> — the dataset has inputs only, with no corresponding correct output. The model's job is to discover hidden patterns, groupings, or structures within the data on its own.</p>
+
+        <p><strong>How it works:</strong></p>
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Workflow</span>
+          </div>
+          <pre><code>Unlabeled Data (Input only, no output given)
+            ↓
+   Model finds hidden structure/patterns
+            ↓
+  Groups, Clusters, or Associations</code></pre>
+        </div>
+
+        <p>Unsupervised learning problems mainly fall into these categories:</p>
+        <ul>
+          <li><strong>Clustering:</strong> Groups similar data points together based on shared characteristics (e.g., customer segmentation). Common algorithms: K-Means, Hierarchical Clustering, DBSCAN.</li>
+          <li><strong>Association:</strong> Finds rules that describe relationships between variables in large datasets (e.g., "customers who buy bread also buy butter" — market basket analysis). Common algorithm: Apriori.</li>
+          <li><strong>Dimensionality Reduction:</strong> Reduces the number of input variables/features while preserving important information, often used to simplify data before further analysis (e.g., Principal Component Analysis – PCA).</li>
+        </ul>
+
+        <p><strong>Real-world examples:</strong> Customer segmentation, anomaly/fraud detection, recommendation systems, image compression, gene sequence analysis.</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Supervised vs Unsupervised (Quick Compare)</span>
+          </div>
+          <pre><code>Supervised Learning              Unsupervised Learning
+--------------------              ----------------------
+Uses labeled data                 Uses unlabeled data
+Predicts known outcome            Discovers hidden patterns
+Classification & Regression       Clustering & Association
+Needs more human effort           Needs less human effort
+                                   (no manual labeling)
+Example: Spam detection           Example: Customer segmentation</code></pre>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

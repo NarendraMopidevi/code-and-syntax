@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Code &amp;&amp; Syntax | Java</title>
+  <title>Code &amp;&amp; Syntax | Snippets</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@400;500&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -12,7 +12,6 @@
 
 <body>
 
-  <!-- Header -->
   <!-- Header -->
   <header class="header" id="header">
     <div id="master-title">
@@ -24,8 +23,10 @@
         <li><a href="java-page.html">Java</a></li>
         <li><a href="python-page.html">Python</a></li>
         <li><a href="spl-page.html">SQL</a></li>
+        <li><a href="aiml.html">AIML</a></li>
         <li><a href="dsa-page.html">DSA</a></li>
-        <li><a href="codes.html" class="active">CODES</a></li>
+        <li><a href="codes.html">CODES</a></li>
+        <!-- <li><a href="snippets.html" class="active">SNIPPETS</a></li> -->
         <li><a href="about.html">About</a></li>
       </ul>
     </nav>
@@ -35,47 +36,43 @@
   <div class="content-container">
 
     <!-- Sidebar -->
-    <aside class="sidebar">
-      <h2>Languages</h2>
+    <aside class="sidebar" aria-label="Snippet topics">
+      <h2>Categories</h2>
 
       <ul>
 
         <!-- Java -->
         <li><strong>Java</strong>
           <ul>
-            <li><a href="#java-intro">Introduction</a></li>
-            <li><a href="#java-syntax">Syntax</a></li>
-            <li><a href="#java-datatypes">Data Types</a></li>
-            <li><a href="#java-control">Control Statements</a></li>
+            <li><a href="#java-arrays">Arrays</a></li>
+            <li><a href="#java-strings">Strings</a></li>
+            <li><a href="#java-collections">Collections</a></li>
           </ul>
         </li>
 
         <!-- Python -->
         <li><strong>Python</strong>
           <ul>
-            <li><a href="#python-intro">Introduction</a></li>
-            <li><a href="#python-syntax">Syntax</a></li>
-            <li><a href="#python-datatypes">Data Types</a></li>
-            <li><a href="#python-control">Control Statements</a></li>
+            <li><a href="#python-lists">Lists</a></li>
+            <li><a href="#python-strings">Strings</a></li>
+            <li><a href="#python-dicts">Dictionaries</a></li>
           </ul>
         </li>
 
         <!-- SQL -->
         <li><strong>SQL</strong>
           <ul>
-            <li><a href="#sql-intro">Introduction</a></li>
-            <li><a href="#sql-commands">Commands</a></li>
-            <li><a href="#sql-queries">Queries</a></li>
+            <li><a href="#sql-joins">Joins</a></li>
+            <li><a href="#sql-aggregates">Aggregate Functions</a></li>
           </ul>
         </li>
 
         <!-- DSA -->
         <li><strong>DSA</strong>
           <ul>
-            <li><a href="#dsa-intro">Introduction</a></li>
-            <li><a href="#dsa-arrays">Arrays</a></li>
-            <li><a href="#dsa-linkedlist">Linked List</a></li>
-            <li><a href="#dsa-twopointer">Two Pointer</a></li>
+            <li><a href="#dsa-sorting">Sorting</a></li>
+            <li><a href="#dsa-searching">Searching</a></li>
+            <li><a href="#dsa-recursion">Recursion</a></li>
           </ul>
         </li>
 
@@ -85,115 +82,276 @@
     <!-- Main Content -->
     <main class="main-content">
 
-      <!-- JAVA -->
-      <section id="java-intro">
-        <h2>Java - Introduction</h2>
-        <p>Java is an object-oriented, platform-independent programming language.</p>
-      </section>
+      <!-- ================= JAVA ================= -->
 
-      <section id="java-syntax">
-        <h2>Java - Syntax</h2>
+      <section id="java-arrays">
+        <h2>Java - Array Codes</h2>
+        <p>Sample snippet placeholder. Rewrite with your own array programs (reverse, max/min, sum, rotation, etc.).</p>
 
         <div class="code-wrap">
-          <pre><code>class Hello {
-  public static void main(String[] args) {
-    System.out.println("Hello Java");
-  }
+          <div class="code-header">
+            <span class="code-lang">Java</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>// TODO: replace with your own array program
+int[] arr = {5, 2, 8, 1, 9};
+int sum = 0;
+
+for (int i = 0; i < arr.length; i++) {
+    sum += arr[i];
+}
+
+System.out.println("Sum: " + sum);</code></pre>
+        </div>
+
+        <h4>Output</h4>
+        <div class="output-block"><pre><code>Sum: 25</code></pre></div>
+      </section>
+
+      <section id="java-strings">
+        <h2>Java - String Codes</h2>
+        <p>Sample snippet placeholder. Rewrite with your own string programs (palindrome, reverse, anagram, etc.).</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Java</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>// TODO: replace with your own string program
+String str = "hello";
+String reversed = new StringBuilder(str).reverse().toString();
+
+System.out.println(reversed);</code></pre>
+        </div>
+
+        <h4>Output</h4>
+        <div class="output-block"><pre><code>olleh</code></pre></div>
+      </section>
+
+      <section id="java-collections">
+        <h2>Java - Collections Codes</h2>
+        <p>Sample snippet placeholder. Rewrite with your own ArrayList / HashMap / HashSet examples.</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Java</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>// TODO: replace with your own collections program
+List&lt;String&gt; names = new ArrayList&lt;&gt;();
+names.add("Ram");
+names.add("John");
+
+for (String n : names) {
+    System.out.println(n);
 }</code></pre>
         </div>
       </section>
 
-      <section id="java-datatypes">
-        <h2>Java - Data Types</h2>
-        <p>Primitive and Non-Primitive data types.</p>
-      </section>
 
-      <section id="java-control">
-        <h2>Java - Control Statements</h2>
-        <p>if, switch, loops.</p>
-      </section>
+      <!-- ================= PYTHON ================= -->
 
-
-      <!-- PYTHON -->
-      <section id="python-intro">
-        <h2>Python - Introduction</h2>
-        <p>Python is a high-level, interpreted language.</p>
-      </section>
-
-      <section id="python-syntax">
-        <h2>Python - Syntax</h2>
+      <section id="python-lists">
+        <h2>Python - List Codes</h2>
+        <p>Sample snippet placeholder. Rewrite with your own list programs (comprehensions, slicing, sorting, etc.).</p>
 
         <div class="code-wrap">
-          <pre><code>print("Hello Python")</code></pre>
+          <div class="code-header">
+            <span class="code-lang">Python</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code># TODO: replace with your own list program
+numbers = [5, 2, 8, 1, 9]
+
+squares = [n * n for n in numbers]
+
+print(squares)</code></pre>
+        </div>
+
+        <h4>Output</h4>
+        <div class="output-block"><pre><code>[25, 4, 64, 1, 81]</code></pre></div>
+      </section>
+
+      <section id="python-strings">
+        <h2>Python - String Codes</h2>
+        <p>Sample snippet placeholder. Rewrite with your own string programs (palindrome, formatting, split/join, etc.).</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Python</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code># TODO: replace with your own string program
+text = "hello"
+
+print(text[::-1])</code></pre>
+        </div>
+
+        <h4>Output</h4>
+        <div class="output-block"><pre><code>olleh</code></pre></div>
+      </section>
+
+      <section id="python-dicts">
+        <h2>Python - Dictionary Codes</h2>
+        <p>Sample snippet placeholder. Rewrite with your own dictionary programs (word count, grouping, merging, etc.).</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Python</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code># TODO: replace with your own dictionary program
+student = {"name": "Alice", "age": 21}
+
+for key, value in student.items():
+    print(key, ":", value)</code></pre>
         </div>
       </section>
 
-      <section id="python-datatypes">
-        <h2>Python - Data Types</h2>
-        <p>int, float, list, tuple, dict.</p>
-      </section>
 
-      <section id="python-control">
-        <h2>Python - Control Statements</h2>
-        <p>if, for, while.</p>
-      </section>
+      <!-- ================= SQL ================= -->
 
-
-      <!-- SQL -->
-      <section id="sql-intro">
-        <h2>SQL - Introduction</h2>
-        <p>SQL is used to manage databases.</p>
-      </section>
-
-      <section id="sql-commands">
-        <h2>SQL Commands</h2>
+      <section id="sql-joins">
+        <h2>SQL - Join Codes</h2>
+        <p>Sample snippet placeholder. Rewrite with your own INNER / LEFT / RIGHT join examples.</p>
 
         <div class="code-wrap">
-          <pre><code>SELECT * FROM students;</code></pre>
+          <div class="code-header">
+            <span class="code-lang">SQL</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>-- TODO: replace with your own join query
+SELECT students.name, courses.course_name
+FROM students
+INNER JOIN courses ON students.course_id = courses.id;</code></pre>
         </div>
       </section>
 
-      <section id="sql-queries">
-        <h2>SQL Queries</h2>
-        <p>Filtering, joining tables.</p>
-      </section>
-
-
-      <!-- DSA -->
-      <section id="dsa-intro">
-        <h2>DSA - Introduction</h2>
-        <p>Data Structures and Algorithms improve problem solving.</p>
-      </section>
-
-      <section id="dsa-arrays">
-        <h2>Arrays</h2>
-        <p>Collection of elements stored in contiguous memory.</p>
-      </section>
-
-      <section id="dsa-linkedlist">
-        <h2>Linked List</h2>
-        <p>Nodes connected via pointers.</p>
-      </section>
-
-      <section id="dsa-twopointer">
-        <h2>Two Pointer Algorithm</h2>
+      <section id="sql-aggregates">
+        <h2>SQL - Aggregate Function Codes</h2>
+        <p>Sample snippet placeholder. Rewrite with your own COUNT / SUM / AVG / GROUP BY examples.</p>
 
         <div class="code-wrap">
-          <pre><code>int left = 0, right = arr.length - 1;
+          <div class="code-header">
+            <span class="code-lang">SQL</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>-- TODO: replace with your own aggregate query
+SELECT department, AVG(salary) AS avg_salary
+FROM employees
+GROUP BY department;</code></pre>
+        </div>
+      </section>
 
-while(left < right){
-    if(arr[left] + arr[right] == target){
-        System.out.println("Found");
+
+      <!-- ================= DSA ================= -->
+
+      <section id="dsa-sorting">
+        <h2>DSA - Sorting Codes</h2>
+        <p>Sample snippet placeholder. Rewrite with your own bubble sort, merge sort, quick sort, etc.</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Java</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>// TODO: replace with your own sorting algorithm
+int[] arr = {5, 2, 8, 1, 9};
+
+for (int i = 0; i < arr.length - 1; i++) {
+    for (int j = 0; j < arr.length - i - 1; j++) {
+        if (arr[j] > arr[j + 1]) {
+            int temp = arr[j];
+            arr[j] = arr[j + 1];
+            arr[j + 1] = temp;
+        }
     }
 }</code></pre>
         </div>
+      </section>
 
+      <section id="dsa-searching">
+        <h2>DSA - Searching Codes</h2>
+        <p>Sample snippet placeholder. Rewrite with your own linear search, binary search, etc.</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Java</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>// TODO: replace with your own searching algorithm
+int[] arr = {1, 3, 5, 7, 9};
+int target = 7;
+int low = 0, high = arr.length - 1;
+
+while (low <= high) {
+    int mid = (low + high) / 2;
+    if (arr[mid] == target) {
+        System.out.println("Found at index " + mid);
+        break;
+    } else if (arr[mid] < target) {
+        low = mid + 1;
+    } else {
+        high = mid - 1;
+    }
+}</code></pre>
+        </div>
+      </section>
+
+      <section id="dsa-recursion">
+        <h2>DSA - Recursion Codes</h2>
+        <p>Sample snippet placeholder. Rewrite with your own factorial, Fibonacci, or backtracking examples.</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Java</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>// TODO: replace with your own recursive program
+static int factorial(int n) {
+    if (n == 0) return 1;
+    return n * factorial(n - 1);
+}</code></pre>
+        </div>
       </section>
 
     </main>
   </div>
 
-  
+
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Code &amp;&amp; Syntax. All rights reserved.</p>

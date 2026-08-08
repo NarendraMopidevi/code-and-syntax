@@ -18,6 +18,7 @@
         <li><a href="java-page.html">Java</a></li>
         <li><a href="python-page.html" class="active">Python</a></li>
         <li><a href="spl-page.html">SQL</a></li>
+        <li><a href="aiml.html">AIML</a></li>
         <li><a href="dsa-page.html">DSA</a></li>
         <li><a href="codes.html">CODES</a></li>
         <li><a href="about.html">About</a></li>
@@ -38,6 +39,7 @@
         <li><a href="#loops">Loops &amp; Control Flow</a></li>
         <li><a href="#functions">Functions</a></li>
         <li><a href="#oops">OOP</a></li>
+        <li><a href="#lambda-functions">Lambda Functions</a></li>
         <li><a href="#modules">Modules &amp; Packages</a></li>
         <li><a href="#exceptions">Exception Handling</a></li>
         <li><a href="#file">File Handling</a></li>
@@ -170,6 +172,181 @@ p1.greet()</code></pre>
         <h4>Output</h4>
         <div class="output-block"><pre><code>Hello, I'm Bob and I'm 30 years old.</code></pre></div>
       </section>
+<!-- Lambda Functions -->
+      <section id="lambda-functions">
+        <h2>Lambda Functions</h2>
+        <p>A <strong>lambda function</strong> is an anonymous (unnamed) function used to write small, one-line functions without formally defining them using <code>def</code>. It's best thought of as a shortcut for creating a function when you only need it for a small task.</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Python</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>def square(x):
+    return x * x
+
+# is the same as:
+square = lambda x: x * x
+
+print(square(5))</code></pre>
+        </div>
+
+        <h4>Output</h4>
+        <div class="output-block"><pre><code>25</code></pre></div>
+
+        <h3>Lambda Syntax</h3>
+        <p>The general form of a lambda function is:</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Python</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>lambda parameters : expression</code></pre>
+        </div>
+
+        <p>Unlike a normal function, <code>return</code> is implicit — the result of the expression is returned automatically. Lambda functions are limited to a single expression, which is why they're best suited for short, simple logic.</p>
+
+        <h3>Lambda vs Normal Function</h3>
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Python</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code># Normal function
+def multiply(a, b):
+    return a * b
+
+print(multiply(10, 20))
+
+# Lambda function
+multiply = lambda a, b: a * b
+
+print(multiply(10, 20))</code></pre>
+        </div>
+
+        <h4>Output</h4>
+        <div class="output-block"><pre><code>200
+200</code></pre></div>
+
+        <h3>Lambda with map()</h3>
+        <p><code>map()</code> applies a function to every element of a sequence.</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Python</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>numbers = [1, 2, 3, 4, 5]
+
+result = list(map(lambda x: x * x, numbers))
+
+print(result)</code></pre>
+        </div>
+
+        <h4>Output</h4>
+        <div class="output-block"><pre><code>[1, 4, 9, 16, 25]</code></pre></div>
+
+        <h3>Lambda with filter()</h3>
+        <p><code>filter()</code> keeps only the elements for which the lambda returns <code>True</code>.</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Python</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>numbers = [1, 2, 3, 4, 5, 6]
+
+even = list(filter(lambda x: x % 2 == 0, numbers))
+
+print(even)</code></pre>
+        </div>
+
+        <h4>Output</h4>
+        <div class="output-block"><pre><code>[2, 4, 6]</code></pre></div>
+
+        <h3>Lambda with reduce()</h3>
+        <p><code>reduce()</code> repeatedly combines elements of a sequence into a single result.</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Python</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>from functools import reduce
+
+numbers = [1, 2, 3, 4]
+
+result = reduce(lambda x, y: x + y, numbers)
+
+print(result)</code></pre>
+        </div>
+
+        <h4>Output</h4>
+        <div class="output-block"><pre><code>10</code></pre></div>
+
+        <h3>Lambda with sorted() / sort()</h3>
+        <p>Lambdas are commonly used as the <code>key</code> function for custom sorting.</p>
+
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Python</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>students = [("Ram", 70), ("John", 95), ("Sam", 80)]
+
+students.sort(key=lambda x: x[1])
+
+print(students)</code></pre>
+        </div>
+
+        <h4>Output</h4>
+        <div class="output-block"><pre><code>[('Ram', 70), ('Sam', 80), ('John', 95)]</code></pre></div>
+
+        <h3>Lambda with max() / min()</h3>
+        <div class="code-wrap">
+          <div class="code-header">
+            <span class="code-lang">Python</span>
+            <div style="display:flex;gap:6px">
+              <button class="expand-btn" title="View fullscreen">⛶</button>
+              <button class="copy-btn">Copy</button>
+            </div>
+          </div>
+          <pre><code>students = [("Ram", 70), ("John", 95), ("Sam", 80)]
+
+highest = max(students, key=lambda x: x[1])
+
+print(highest)</code></pre>
+        </div>
+
+        <h4>Output</h4>
+        <div class="output-block"><pre><code>('John', 95)</code></pre></div>
+
+        <h3>When to Use Lambda</h3>
+        <p>Use a lambda when the function is short, used only once, passed as an argument, or used with <code>map()</code>, <code>filter()</code>, <code>sorted()</code>, <code>max()</code>, or <code>min()</code>. Avoid lambdas when the logic is long, requires multiple statements, loops, or <code>try/except</code>, or when the function will be reused in many places — a named function is clearer in those cases.</p>
+      </section>
+
 
       <!-- Modules -->
       <section id="modules">
